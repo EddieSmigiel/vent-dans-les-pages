@@ -1,0 +1,26 @@
+---
+layout: layouts/page.njk
+title: "Catalogue"
+pageTag: "Boutique en ligne"
+pageHeader: "Notre <em>catalogue</em>"
+pageDesc: "Commandez directement nos ouvrages. Paiement sécurisé, livraison soignée."
+permalink: /catalogue/
+---
+
+<section class="catalogue">
+    <div class="container">
+        <div class="catalogue-filters" data-reveal="up">
+            <button class="cat-filter active" data-filter="all">Tout</button>
+            <button class="cat-filter" data-filter="poesie">Poésie</button>
+            <button class="cat-filter" data-filter="roman">Roman</button>
+            <button class="cat-filter" data-filter="essai">Essai</button>
+            <button class="cat-filter" data-filter="jeunesse">Jeunesse</button>
+        </div>
+
+        <div class="books-grid">
+            {% for livre in collections.livres %}
+            {% include "partials/book-card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

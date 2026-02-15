@@ -1,0 +1,24 @@
+---
+layout: layouts/page.njk
+title: "Blog"
+pageTag: "Actualités"
+pageHeader: "Le <em>blog</em>"
+pageDesc: "Interviews, coulisses de l'édition et actualités littéraires."
+permalink: /blog/
+---
+
+<section class="catalogue">
+    <div class="container">
+        <div class="articles-grid">
+            {% for article in collections.blog | reverse %}
+            {% include "partials/article-card.njk" %}
+            {% endfor %}
+        </div>
+
+        {% if collections.blog.length == 0 %}
+        <p style="text-align: center; color: var(--text-light); padding: 3rem 0;">
+            Aucun article pour le moment. Revenez bientôt !
+        </p>
+        {% endif %}
+    </div>
+</section>

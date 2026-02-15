@@ -1,0 +1,41 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">
+                    Du vent dans les pages
+                    <small>Association & Maison d'édition</small>
+                </div>
+                <p>Maison d'édition indépendante et associative, installée à Strasbourg. Nous publions des textes qui font souffler un vent nouveau sur la littérature.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    {% for item in navigation.footer.navigation %}
+                    <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h4>Informations</h4>
+                <ul>
+                    {% for item in navigation.footer.infos %}
+                    <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h4>Nous suivre</h4>
+                <ul>
+                    {% for item in navigation.footer.social %}
+                    <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Du vent dans les pages — Association de droit local — Strasbourg<br>
+            <a href="/mentions-legales/">Mentions légales</a> &middot; Site réalisé par Emmanuel Pinglier
+        </div>
+    </div>
+</footer>

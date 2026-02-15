@@ -1,0 +1,32 @@
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">V</div>
+            <div class="logo-text">
+                Du vent dans les pages
+                <small>Association & Maison d'édition</small>
+            </div>
+        </a>
+
+        <nav>
+            <ul class="nav" id="main-nav">
+                {% for item in navigation.main %}
+                <li><a href="{{ item.url }}"{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.label }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <button class="snipcart-checkout cart-toggle" aria-label="Panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                <span class="snipcart-items-count cart-count"></span>
+            </button>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+</header>

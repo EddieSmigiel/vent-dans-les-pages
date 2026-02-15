@@ -1,0 +1,139 @@
+---
+layout: layouts/base.njk
+title: "Accueil"
+description: "Du vent dans les pages, association et maison d'édition indépendante à Strasbourg. Découvrez notre catalogue et commandez en ligne."
+permalink: /
+---
+
+{% include "partials/header.njk" %}
+
+<main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-decor">
+            <div class="floating-page"></div>
+            <div class="floating-page"></div>
+            <div class="floating-page"></div>
+            <div class="floating-page"></div>
+            <div class="floating-page"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content" data-reveal="up">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                    </svg>
+                    Maison d'édition strasbourgeoise
+                </div>
+
+                <h1>
+                    <em>Du vent</em><br>
+                    dans les pages
+                </h1>
+
+                <p class="hero-desc">
+                    Association et maison d'édition indépendante à Strasbourg. Nous publions des voix singulières, organisons des rencontres littéraires et cultivons le plaisir de lire.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="/catalogue/" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                        </svg>
+                        Découvrir le catalogue
+                    </a>
+                    <a href="/association/" class="btn btn-secondary">
+                        Notre histoire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LIVRES VEDETTE ===== -->
+    <section class="catalogue" id="livres-vedette">
+        <div class="container">
+            <div class="section-header" data-reveal="up">
+                <div class="section-tag">Boutique en ligne</div>
+                <h2 class="section-title">Nos <em>coups de c&oelig;ur</em></h2>
+                <p class="section-desc">Nos ouvrages phares, sélectionnés par l'équipe.</p>
+            </div>
+
+            <div class="books-grid">
+                {% for livre in collections.livresVedette | limit(3) %}
+                {% include "partials/book-card.njk" %}
+                {% endfor %}
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/catalogue/" class="btn btn-secondary">Voir tout le catalogue</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ÉVÉNEMENTS ===== -->
+    {% set upcomingEvents = collections.evenements | futureEvents %}
+    {% if upcomingEvents.length > 0 %}
+    <section class="events" id="evenements">
+        <div class="container">
+            <div class="section-header" data-reveal="up">
+                <div class="section-tag">Agenda</div>
+                <h2 class="section-title">Nos <em>événements</em></h2>
+                <p class="section-desc">Rencontres, lectures, dédicaces : retrouvez-nous en chair et en os.</p>
+            </div>
+
+            <div class="events-grid">
+                {% for event in upcomingEvents | limit(3) %}
+                {% include "partials/event-card.njk" %}
+                {% endfor %}
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/evenements/" class="btn btn-secondary">Tous les événements</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- ===== BLOG APERÇU ===== -->
+    {% if collections.blog.length > 0 %}
+    <section class="catalogue" id="blog-apercu">
+        <div class="container">
+            <div class="section-header" data-reveal="up">
+                <div class="section-tag">Le blog</div>
+                <h2 class="section-title">Nos <em>actualités</em></h2>
+                <p class="section-desc">Interviews, coulisses de l'édition et actualités littéraires.</p>
+            </div>
+
+            <div class="articles-grid">
+                {% for article in collections.blog | reverse | limit(3) %}
+                {% include "partials/article-card.njk" %}
+                {% endfor %}
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/blog/" class="btn btn-secondary">Tous les articles</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- ===== CTA ADHÉSION ===== -->
+    <section class="events" id="adhesion-cta">
+        <div class="container">
+            <div class="section-header" data-reveal="up">
+                <div class="section-tag">Rejoignez-nous</div>
+                <h2 class="section-title">Devenez <em>adhérent</em></h2>
+                <p class="section-desc">Soutenez l'édition indépendante en Alsace. Adhérez à l'association et bénéficiez d'avantages exclusifs : tarifs réduits, avant-premières, invitations aux événements.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="/adhesion/" class="btn btn-primary">Adhérer en ligne</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% include "partials/footer.njk" %}

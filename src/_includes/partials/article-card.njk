@@ -1,0 +1,17 @@
+{% set ad = articleData or article.data %}
+<article class="article-card" data-reveal="up" data-delay="{{ loop.index0 % 3 }}">
+    <div class="article-card-body">
+        {% if ad.categorie %}
+        <div class="section-tag">{{ ad.categorie }}</div>
+        {% endif %}
+        <h3 class="article-card-title"><a href="{{ article.url }}">{{ ad.title }}</a></h3>
+        <div class="article-card-meta">
+            <time>{{ ad.date or article.date | dateFr }}</time>
+            {% if ad.auteur %}
+            <span>· {{ ad.auteur }}</span>
+            {% endif %}
+        </div>
+        <p class="article-card-excerpt">{{ ad.excerpt or (article.templateContent | excerpt) }}</p>
+        <a href="{{ article.url }}" class="article-card-link">Lire la suite →</a>
+    </div>
+</article>

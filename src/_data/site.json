@@ -1,0 +1,15 @@
+{
+  "name": "Du vent dans les pages",
+  "tagline": "Association & Maison d'édition",
+  "description": "Du vent dans les pages, association et maison d'édition indépendante à Strasbourg. Découvrez notre catalogue et commandez en ligne.",
+  "url": "https://duventdanslespages.fr",
+  "email": "contact@duventdanslespages.fr",
+  "phone": "06 68 06 76 61",
+  "address": "15 rue Bastian, 67200 Strasbourg",
+  "horaires": "Mardi au samedi, 10h - 18h",
+  "snipcartApiKey": "YOUR_SNIPCART_PUBLIC_TEST_API_KEY",
+  "social": {
+    "instagram": "#",
+    "facebook": "#"
+  }
+}

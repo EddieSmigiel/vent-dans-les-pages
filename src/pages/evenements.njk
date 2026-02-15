@@ -1,0 +1,46 @@
+---
+layout: layouts/page.njk
+title: "Événements"
+pageTag: "Agenda"
+pageHeader: "Nos <em>événements</em>"
+pageDesc: "Rencontres, lectures, dédicaces : retrouvez-nous en chair et en os."
+permalink: /evenements/
+---
+
+{% set upcomingEvents = collections.evenements | futureEvents %}
+
+{% if upcomingEvents.length > 0 %}
+<section class="events">
+    <div class="container">
+        <div class="section-header" data-reveal="up">
+            <div class="section-tag">À venir</div>
+            <h2 class="section-title">Prochains <em>rendez-vous</em></h2>
+        </div>
+        <div class="events-grid">
+            {% for event in upcomingEvents %}
+            {% include "partials/event-card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="catalogue">
+    <div class="container">
+        <div class="section-header" data-reveal="up">
+            <div class="section-tag">Tous les événements</div>
+            <h2 class="section-title">Notre <em>agenda</em></h2>
+        </div>
+        <div class="events-grid">
+            {% for event in collections.evenements | reverse %}
+            {% include "partials/event-card.njk" %}
+            {% endfor %}
+        </div>
+
+        {% if collections.evenements.length == 0 %}
+        <p style="text-align: center; color: var(--text-light); padding: 3rem 0;">
+            Aucun événement pour le moment. Revenez bientôt !
+        </p>
+        {% endif %}
+    </div>
+</section>

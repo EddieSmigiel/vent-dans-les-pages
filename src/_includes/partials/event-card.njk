@@ -1,0 +1,20 @@
+{% set ed = eventData or event.data %}
+<div class="event-card" data-reveal="up" data-delay="{{ loop.index0 % 3 }}">
+    <div class="event-date">
+        <div class="event-date-box">
+            <span class="event-day">{{ ed.eventDate | dateJour }}</span>
+            <span class="event-month">{{ ed.eventDate | dateMois }}</span>
+        </div>
+        <div class="event-date-info">
+            <strong>{{ ed.horaire or '' }}</strong><br>
+            {{ ed.lieu or '' }}
+        </div>
+    </div>
+    <h3>{{ ed.title }}</h3>
+    <p>{{ ed.excerpt or ed.description or '' }}</p>
+    {% if ed.gratuit %}
+    <span class="event-tag free">Entrée libre</span>
+    {% elif ed.inscription %}
+    <span class="event-tag">Sur inscription</span>
+    {% endif %}
+</div>

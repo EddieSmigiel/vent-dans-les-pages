@@ -1,0 +1,89 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+locale: "fr"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  - name: "livres"
+    label: "Livres"
+    label_singular: "Livre"
+    folder: "src/livres"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Auteur", name: "auteur", widget: "string" }
+      - label: "Genre"
+        name: "genre"
+        widget: "select"
+        options: ["Poésie", "Roman", "Essai", "Jeunesse"]
+      - { label: "Prix TTC (€)", name: "prix", widget: "number", value_type: "float", min: 0, step: 0.01 }
+      - { label: "ISBN", name: "isbn", widget: "string", required: false }
+      - { label: "Nombre de pages", name: "pages", widget: "number", value_type: "int", required: false }
+      - { label: "Poids (grammes)", name: "poids", widget: "number", value_type: "int", default: 300 }
+      - label: "Couleur couverture"
+        name: "coverClass"
+        widget: "select"
+        options:
+          - { label: "Vert forêt", value: "cover-1" }
+          - { label: "Rose bordeaux", value: "cover-2" }
+          - { label: "Bleu nuit", value: "cover-3" }
+          - { label: "Ocre doré", value: "cover-4" }
+          - { label: "Terracotta", value: "cover-5" }
+          - { label: "Violet prune", value: "cover-6" }
+      - label: "Badge"
+        name: "badge"
+        widget: "select"
+        required: false
+        options:
+          - { label: "(aucun)", value: "" }
+          - "Nouveau"
+          - "Jeunesse"
+          - "Beau livre"
+          - "Coup de coeur"
+      - { label: "Résumé court", name: "excerpt", widget: "text" }
+      - { label: "En vedette (accueil)", name: "vedette", widget: "boolean", default: false }
+      - { label: "Stock disponible", name: "stock", widget: "number", value_type: "int", default: 50, hint: "Nombre d'exemplaires en stock" }
+      - { label: "Date de publication", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Contenu (synopsis, bio auteur...)", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Article"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Auteur", name: "auteur", widget: "string", default: "L'équipe éditoriale" }
+      - label: "Catégorie"
+        name: "categorie"
+        widget: "select"
+        options: ["Actualités", "Coulisses", "Événements", "Revue de presse"]
+      - { label: "Résumé", name: "excerpt", widget: "text" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "evenements"
+    label: "Événements"
+    label_singular: "Événement"
+    folder: "src/evenements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de l'événement", name: "eventDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Horaire", name: "horaire", widget: "string", hint: "Ex: Samedi, 15h-18h" }
+      - { label: "Lieu", name: "lieu", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Entrée gratuite", name: "gratuit", widget: "boolean", default: true }
+      - { label: "Sur inscription", name: "inscription", widget: "boolean", default: false }
+      - { label: "Détails (optionnel)", name: "body", widget: "markdown", required: false }

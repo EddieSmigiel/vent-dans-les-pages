@@ -1,0 +1,30 @@
+{
+  "main": [
+    { "label": "La Maison", "url": "/association/" },
+    { "label": "Catalogue", "url": "/catalogue/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "Événements", "url": "/evenements/" },
+    { "label": "Contact", "url": "/contact/", "class": "btn-nav" }
+  ],
+  "footer": {
+    "navigation": [
+      { "label": "La Maison", "url": "/association/" },
+      { "label": "Catalogue", "url": "/catalogue/" },
+      { "label": "Blog", "url": "/blog/" },
+      { "label": "Événements", "url": "/evenements/" },
+      { "label": "Contact", "url": "/contact/" },
+      { "label": "Adhésion", "url": "/adhesion/" }
+    ],
+    "infos": [
+      { "label": "Mentions légales", "url": "/mentions-legales/" },
+      { "label": "CGV", "url": "/cgv/" },
+      { "label": "Politique de confidentialité", "url": "/confidentialite/" },
+      { "label": "Livraison & retours", "url": "/cgv/#livraison" }
+    ],
+    "social": [
+      { "label": "Instagram", "url": "#" },
+      { "label": "Facebook", "url": "#" },
+      { "label": "Newsletter", "url": "#" }
+    ]
+  }
+}

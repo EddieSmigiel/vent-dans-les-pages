@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/header.njk" %}
+
+<main>
+    <section class="page-header page-header--compact">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="/">Accueil</a>
+                <span>/</span>
+                <a href="/blog/">Blog</a>
+                <span>/</span>
+                <span>{{ title }}</span>
+            </nav>
+        </div>
+    </section>
+
+    <article class="article-detail">
+        <div class="container container--narrow">
+            <header class="article-header" data-reveal="up">
+                {% if categorie %}
+                <div class="section-tag">{{ categorie }}</div>
+                {% endif %}
+                <h1 class="article-titre">{{ title }}</h1>
+                <div class="article-meta">
+                    <time datetime="{{ date | dateFr }}">{{ date | dateFr }}</time>
+                    {% if auteur %}
+                    <span class="article-meta-sep">·</span>
+                    <span>{{ auteur }}</span>
+                    {% endif %}
+                </div>
+            </header>
+
+            <div class="prose" data-reveal="up">
+                {{ content | safe }}
+            </div>
+
+            <footer class="article-footer" data-reveal="up">
+                <a href="/blog/" class="btn btn-secondary">← Retour au blog</a>
+            </footer>
+        </div>
+    </article>
+</main>
+
+{% include "partials/footer.njk" %}

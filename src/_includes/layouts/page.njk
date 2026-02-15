@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/header.njk" %}
+
+<main>
+    {% if pageHeader %}
+    <section class="page-header">
+        <div class="container">
+            <div class="section-tag" data-reveal="up">{{ pageTag or '' }}</div>
+            <h1 class="section-title" data-reveal="up">{{ pageHeader | safe }}</h1>
+            {% if pageDesc %}
+            <p class="section-desc" data-reveal="up">{{ pageDesc }}</p>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+    {{ content | safe }}
+</main>
+
+{% include "partials/footer.njk" %}

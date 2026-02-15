@@ -1,0 +1,121 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/header.njk" %}
+
+<main>
+    <section class="page-header page-header--compact">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="/">Accueil</a>
+                <span>/</span>
+                <a href="/catalogue/">Catalogue</a>
+                <span>/</span>
+                <span>{{ title }}</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="livre-detail">
+        <div class="container">
+            <div class="livre-grid">
+                <div class="livre-cover" data-reveal="left">
+                    <div class="book-cover-art {{ coverClass or 'cover-1' }}">
+                        <div class="book-cover-inner">
+                            <div class="book-cover-title">{{ title }}</div>
+                            <div class="book-cover-author">{{ auteur }}</div>
+                        </div>
+                        <div class="book-cover-publisher">Du vent dans les pages</div>
+                    </div>
+                </div>
+
+                <div class="livre-info" data-reveal="right">
+                    <div class="book-genre">{{ genre }}</div>
+                    <h1 class="livre-titre">{{ title }}</h1>
+                    <div class="livre-auteur">par {{ auteur }}</div>
+
+                    <div class="livre-prix-block">
+                        <div class="book-price livre-prix">{{ prix | prix }} <small>TTC</small></div>
+                        {% if stock !== false %}
+                        <span class="livre-stock en-stock">En stock</span>
+                        {% else %}
+                        <span class="livre-stock rupture">Rupture de stock</span>
+                        {% endif %}
+                    </div>
+
+                    <button class="btn btn-primary snipcart-add-item"
+                        data-item-id="{{ slug or (title | slug) }}"
+                        data-item-name="{{ title }}"
+                        data-item-price="{{ prix }}"
+                        data-item-url="/catalogue/{{ slug or (title | slug) }}/"
+                        data-item-description="{{ genre }} — {{ auteur }}"
+                        data-item-image=""
+                        data-item-weight="{{ poids or 300 }}"
+                        {% if stock === false %}disabled{% endif %}>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 01-8 0"/>
+                        </svg>
+                        Ajouter au panier
+                    </button>
+
+                    <div class="livre-meta">
+                        {% if pages %}<div class="livre-meta-item"><strong>Pages :</strong> {{ pages }}</div>{% endif %}
+                        {% if isbn %}<div class="livre-meta-item"><strong>ISBN :</strong> {{ isbn }}</div>{% endif %}
+                        {% if poids %}<div class="livre-meta-item"><strong>Poids :</strong> {{ poids }}g</div>{% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="livre-content prose" data-reveal="up">
+                <h2>Synopsis</h2>
+                {{ content | safe }}
+            </div>
+
+            {% set autresLivres = collections.livres | limit(4) %}
+            {% if autresLivres.length > 1 %}
+            <div class="livre-suggestions" data-reveal="up">
+                <h2 class="section-title">Vous aimerez <em>aussi</em></h2>
+                <div class="books-grid">
+                    {% for livre in autresLivres %}
+                        {% if livre.data.title !== title %}
+                            {% set livreData = livre.data %}
+                            {% include "partials/book-card.njk" %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+{% include "partials/footer.njk" %}
+
+<!-- JSON-LD Book Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "{{ title }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ auteur }}"
+    },
+    "genre": "{{ genre }}",
+    {% if isbn %}"isbn": "{{ isbn }}",{% endif %}
+    {% if pages %}"numberOfPages": {{ pages }},{% endif %}
+    "publisher": {
+        "@type": "Organization",
+        "name": "Du vent dans les pages"
+    },
+    "offers": {
+        "@type": "Offer",
+        "price": "{{ prix }}",
+        "priceCurrency": "EUR",
+        "availability": "{% if stock !== false %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}"
+    }
+}
+</script>
