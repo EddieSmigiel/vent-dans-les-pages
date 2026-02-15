@@ -7,6 +7,21 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+    (function() {
+        var p = sessionStorage.getItem("admin_ok");
+        if (p !== "1") {
+            var saisie = prompt("Mot de passe administration :");
+            if (saisie !== "dvdlp2026") {
+                document.body.innerText = "Accès refusé.";
+                return;
+            }
+            sessionStorage.setItem("admin_ok", "1");
+        }
+        var s = document.createElement("script");
+        s.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
+        document.body.appendChild(s);
+    })();
+    </script>
 </body>
 </html>
