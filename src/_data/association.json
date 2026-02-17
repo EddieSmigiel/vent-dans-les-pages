@@ -1,0 +1,27 @@
+{
+  "citation": "Les livres sont des portes que l'on ouvre avec le vent de la curiosité.",
+  "citationSource": "Devise de l'association",
+  "presentationTitre": "Une maison d'édition associative, ancrée à Strasbourg",
+  "presentationTexte1": "Fondée en 2025, <strong>Du vent dans les pages</strong> est née de la passion commune de lecteurs et d'auteurs strasbourgeois pour la littérature vivante. Notre association porte une maison d'édition indépendante qui publie poésie, récits, essais et littérature jeunesse.",
+  "presentationTexte2": "Nous croyons que chaque texte mérite un souffle, chaque voix un espace. Nos éditions sont soignées, nos tirages raisonnés, notre démarche engagée pour une édition à taille humaine.",
+  "stats": [
+    { "nombre": "24", "label": "Ouvrages publiés" },
+    { "nombre": "12", "label": "Auteurs édités" },
+    { "nombre": "6", "label": "Années d'existence" }
+  ],
+  "valeurs": [
+    { "icone": "✍", "titre": "Édition soignée", "texte": "Chaque ouvrage est travaillé avec soin, du manuscrit à l'impression." },
+    { "icone": "🌱", "titre": "Engagement local", "texte": "Imprimé en Alsace, diffusé dans les librairies indépendantes." },
+    { "icone": "📚", "titre": "Diversité littéraire", "texte": "Poésie, romans, essais, jeunesse : toutes les voix comptent." },
+    { "icone": "🎨", "titre": "Rencontres", "texte": "Lectures, ateliers, dédicaces : la littérature se vit ensemble." }
+  ],
+  "equipeTag": "L'équipe",
+  "equipeTitre": "Qui sommes-<em>nous</em> ?",
+  "equipeIntro": "L'association est animée par une équipe de bénévoles passionnés de littérature. Le bureau se compose de :",
+  "equipe": [
+    { "role": "Présidente", "nom": "[Nom de la présidente]" },
+    { "role": "Trésorière", "nom": "[Nom de la trésorière]" },
+    { "role": "Secrétaire", "nom": "[Nom du/de la secrétaire]" }
+  ],
+  "comiteLecture": "Le comité de lecture, composé de cinq membres, se réunit chaque trimestre pour examiner les manuscrits reçus. Notre objectif : publier 4 à 6 ouvrages par an, dans le respect des auteurs et des lecteurs."
+}

@@ -1,0 +1,21 @@
+{
+  "avantagesTitre": "Pourquoi adhérer ?",
+  "avantages": [
+    { "icone": "&#128230;", "titre": "-10% sur le catalogue", "texte": "Tarif adhérent sur tous nos ouvrages, en ligne et en événements." },
+    { "icone": "&#128220;", "titre": "Avant-premières", "texte": "Recevez les nouveautés en avant-première, avant leur mise en vente." },
+    { "icone": "&#127915;", "titre": "Invitations VIP", "texte": "Accès privilégié aux dédicaces, ateliers et rencontres avec les auteurs." },
+    { "icone": "&#10084;", "titre": "Soutien à la création", "texte": "Votre cotisation finance directement la publication de nouveaux auteurs." }
+  ],
+  "formulesTag": "Cotisation annuelle",
+  "formulesTitre": "Les <em>formules</em>",
+  "formules": [
+    { "nom": "Adhérent individuel", "prix": "15,00", "description": "Accès à tous les avantages adhérents. Droit de vote à l'assemblée générale." },
+    { "nom": "Adhérent bienfaiteur", "prix": "30,00", "description": "Tous les avantages + un ouvrage offert parmi notre catalogue." },
+    { "nom": "Adhérent soutien", "prix": "50,00", "description": "Tous les avantages + deux ouvrages offerts + mention dans nos publications." }
+  ],
+  "helloassoTag": "Adhérer en ligne",
+  "helloassoTitre": "Adhésion via <em>HelloAsso</em>",
+  "helloassoDesc": "Réglez votre cotisation en ligne de manière sécurisée via HelloAsso, la plateforme de référence pour les associations.",
+  "helloassoPlaceholder": "Le formulaire d'adhésion sera intégré ici une fois le compte HelloAsso de l'association configuré.",
+  "helloassoFallback": "En attendant, vous pouvez adhérer en nous contactant directement par email à"
+}

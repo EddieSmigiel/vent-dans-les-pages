@@ -12,7 +12,7 @@ permalink: /contact/
         <div class="contact-grid">
             <div class="contact-info" data-reveal="left">
                 <h3>{{ site.name }}</h3>
-                <p>Association de droit local &amp; maison d'édition indépendante, installée au c&oelig;ur de Strasbourg.</p>
+                <p>{{ contact.description | safe }}</p>
 
                 <div class="contact-details">
                     <div class="contact-item">
@@ -68,7 +68,7 @@ permalink: /contact/
             </div>
 
             <div class="contact-form-wrapper" data-reveal="right">
-                <h3>Envoyez-nous un message</h3>
+                <h3>{{ contact.formeTitre }}</h3>
                 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <p class="hidden" style="display:none;">
                         <label>Ne pas remplir : <input name="bot-field"></label>
@@ -117,9 +117,9 @@ permalink: /contact/
 <section class="catalogue" id="manuscrit">
     <div class="container">
         <div class="section-header" data-reveal="up">
-            <div class="section-tag">Auteurs</div>
-            <h2 class="section-title">Soumettre un <em>manuscrit</em></h2>
-            <p class="section-desc">Vous écrivez ? Envoyez-nous votre texte. Notre comité de lecture examine chaque manuscrit avec attention.</p>
+            <div class="section-tag">{{ contact.manuscritTag }}</div>
+            <h2 class="section-title">{{ contact.manuscritTitre | safe }}</h2>
+            <p class="section-desc">{{ contact.manuscritDesc }}</p>
         </div>
 
         <div class="contact-form-wrapper" style="max-width: 640px; margin: 0 auto;" data-reveal="up">

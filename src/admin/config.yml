@@ -1,6 +1,5 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: test-repo
 
 media_folder: "src/images"
 public_folder: "/images"
@@ -12,6 +11,135 @@ slug:
   clean_accents: true
 
 collections:
+  - name: "parametres"
+    label: "Paramètres"
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "Infos générales"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Nom du site", name: "name", widget: "string" }
+          - { label: "Slogan", name: "tagline", widget: "string" }
+          - { label: "Description SEO", name: "description", widget: "text" }
+          - { label: "URL du site", name: "url", widget: "string" }
+          - { label: "E-mail", name: "email", widget: "string" }
+          - { label: "Téléphone", name: "phone", widget: "string" }
+          - { label: "Adresse", name: "address", widget: "string" }
+          - { label: "Horaires", name: "horaires", widget: "string" }
+          - { label: "Clé API Snipcart", name: "snipcartApiKey", widget: "string" }
+          - { label: "Description footer", name: "footerDesc", widget: "text" }
+          - { label: "Copyright (sans l'année)", name: "copyright", widget: "string" }
+          - { label: "Crédit développeur", name: "creditDev", widget: "string" }
+          - { label: "Directeur de la publication", name: "directeurPublication", widget: "string" }
+          - { label: "Statut juridique", name: "statutJuridique", widget: "string" }
+          - { label: "SIREN", name: "siren", widget: "string" }
+          - { label: "SIRET", name: "siret", widget: "string" }
+          - { label: "N° TVA intracommunautaire", name: "tvaIntra", widget: "string" }
+          - label: "Réseaux sociaux"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "Facebook", name: "facebook", widget: "string" }
+
+      - name: "accueil"
+        label: "Page d'accueil"
+        file: "src/_data/accueil.json"
+        fields:
+          - { label: "Badge hero", name: "heroBadge", widget: "string" }
+          - { label: "Description hero", name: "heroDesc", widget: "text" }
+          - { label: "Vedette — étiquette", name: "vedetteTag", widget: "string" }
+          - { label: "Vedette — titre (HTML autorisé)", name: "vedetteTitre", widget: "string" }
+          - { label: "Vedette — description", name: "vedetteDesc", widget: "text" }
+          - { label: "Événements — étiquette", name: "evenementsTag", widget: "string" }
+          - { label: "Événements — titre (HTML autorisé)", name: "evenementsTitre", widget: "string" }
+          - { label: "Événements — description", name: "evenementsDesc", widget: "text" }
+          - { label: "Blog — étiquette", name: "blogTag", widget: "string" }
+          - { label: "Blog — titre (HTML autorisé)", name: "blogTitre", widget: "string" }
+          - { label: "Blog — description", name: "blogDesc", widget: "text" }
+          - { label: "Adhésion — étiquette", name: "adhesionTag", widget: "string" }
+          - { label: "Adhésion — titre (HTML autorisé)", name: "adhesionTitre", widget: "string" }
+          - { label: "Adhésion — description", name: "adhesionDesc", widget: "text" }
+
+      - name: "association"
+        label: "Page association"
+        file: "src/_data/association.json"
+        fields:
+          - { label: "Citation", name: "citation", widget: "string" }
+          - { label: "Source de la citation", name: "citationSource", widget: "string" }
+          - { label: "Titre présentation", name: "presentationTitre", widget: "string" }
+          - { label: "Paragraphe 1 (HTML autorisé)", name: "presentationTexte1", widget: "text" }
+          - { label: "Paragraphe 2 (HTML autorisé)", name: "presentationTexte2", widget: "text" }
+          - label: "Statistiques"
+            name: "stats"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Valeurs"
+            name: "valeurs"
+            widget: "list"
+            max: 4
+            min: 4
+            fields:
+              - { label: "Icône (emoji)", name: "icone", widget: "string" }
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Description", name: "texte", widget: "text" }
+          - { label: "Section équipe — étiquette", name: "equipeTag", widget: "string" }
+          - { label: "Section équipe — titre (HTML autorisé)", name: "equipeTitre", widget: "string" }
+          - { label: "Section équipe — introduction", name: "equipeIntro", widget: "text" }
+          - label: "Bureau"
+            name: "equipe"
+            widget: "list"
+            max: 5
+            fields:
+              - { label: "Rôle", name: "role", widget: "string" }
+              - { label: "Nom", name: "nom", widget: "string" }
+          - { label: "Texte comité de lecture", name: "comiteLecture", widget: "text" }
+
+      - name: "adhesion"
+        label: "Page adhésion"
+        file: "src/_data/adhesion.json"
+        fields:
+          - { label: "Titre section avantages", name: "avantagesTitre", widget: "string" }
+          - label: "Avantages"
+            name: "avantages"
+            widget: "list"
+            max: 6
+            fields:
+              - { label: "Icône (code HTML)", name: "icone", widget: "string" }
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Description", name: "texte", widget: "text" }
+          - { label: "Formules — étiquette", name: "formulesTag", widget: "string" }
+          - { label: "Formules — titre (HTML autorisé)", name: "formulesTitre", widget: "string" }
+          - label: "Formules"
+            name: "formules"
+            widget: "list"
+            max: 5
+            fields:
+              - { label: "Nom", name: "nom", widget: "string" }
+              - { label: "Prix (ex: 15,00)", name: "prix", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "HelloAsso — étiquette", name: "helloassoTag", widget: "string" }
+          - { label: "HelloAsso — titre (HTML autorisé)", name: "helloassoTitre", widget: "string" }
+          - { label: "HelloAsso — description", name: "helloassoDesc", widget: "text" }
+          - { label: "HelloAsso — texte placeholder", name: "helloassoPlaceholder", widget: "text" }
+          - { label: "HelloAsso — texte de repli", name: "helloassoFallback", widget: "text" }
+
+      - name: "contact"
+        label: "Page contact"
+        file: "src/_data/contact.json"
+        fields:
+          - { label: "Description (HTML autorisé)", name: "description", widget: "text" }
+          - { label: "Titre du formulaire", name: "formeTitre", widget: "string" }
+          - { label: "Manuscrit — étiquette", name: "manuscritTag", widget: "string" }
+          - { label: "Manuscrit — titre (HTML autorisé)", name: "manuscritTitre", widget: "string" }
+          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "text" }
+
   - name: "livres"
     label: "Livres"
     label_singular: "Livre"

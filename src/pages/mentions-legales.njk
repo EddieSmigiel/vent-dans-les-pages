@@ -10,17 +10,17 @@ permalink: /mentions-legales/
         <div class="legal-content prose">
             <h2>Éditeur du site</h2>
             <p>
-                <strong>Du vent dans les pages</strong><br>
-                Association de droit local (articles 21 à 79-III du Code civil local)<br>
+                <strong>{{ site.name }}</strong><br>
+                {{ site.statutJuridique }}<br>
                 {{ site.address }}<br>
                 Email : {{ site.email }}<br>
                 Téléphone : {{ site.phone }}
             </p>
             <p>
-                <strong>Directeur de la publication</strong> : Didier Smigiel<br>
-                <strong>SIREN</strong> : 999 408 149<br>
-                <strong>SIRET</strong> : 999 408 149 00014<br>
-                <strong>N° TVA intracommunautaire</strong> : FR49999408149
+                <strong>Directeur de la publication</strong> : {{ site.directeurPublication }}<br>
+                <strong>SIREN</strong> : {{ site.siren }}<br>
+                <strong>SIRET</strong> : {{ site.siret }}<br>
+                <strong>N° TVA intracommunautaire</strong> : {{ site.tvaIntra }}
             </p>
 
             <h2>Hébergement</h2>
@@ -32,7 +32,7 @@ permalink: /mentions-legales/
 
             <h2>Conception et réalisation</h2>
             <p>
-                Site conçu et développé par <strong>Emmanuel Pinglier</strong><br>
+                Site conçu et développé par <strong>{{ site.creditDev }}</strong><br>
                 <a href="https://emmanuelpinglier.fr">emmanuelpinglier.fr</a>
             </p>
 

@@ -25,7 +25,7 @@ permalink: /
                         <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
                         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
                     </svg>
-                    Maison d'édition strasbourgeoise
+                    {{ accueil.heroBadge }}
                 </div>
 
                 <h1>
@@ -34,7 +34,7 @@ permalink: /
                 </h1>
 
                 <p class="hero-desc">
-                    Association et maison d'édition indépendante à Strasbourg. Nous publions des voix singulières, organisons des rencontres littéraires et cultivons le plaisir de lire.
+                    {{ accueil.heroDesc }}
                 </p>
 
                 <div class="hero-actions">
@@ -57,9 +57,9 @@ permalink: /
     <section class="catalogue" id="livres-vedette">
         <div class="container">
             <div class="section-header" data-reveal="up">
-                <div class="section-tag">Boutique en ligne</div>
-                <h2 class="section-title">Nos <em>coups de c&oelig;ur</em></h2>
-                <p class="section-desc">Nos ouvrages phares, sélectionnés par l'équipe.</p>
+                <div class="section-tag">{{ accueil.vedetteTag }}</div>
+                <h2 class="section-title">{{ accueil.vedetteTitre | safe }}</h2>
+                <p class="section-desc">{{ accueil.vedetteDesc }}</p>
             </div>
 
             <div class="books-grid">
@@ -80,9 +80,9 @@ permalink: /
     <section class="events" id="evenements">
         <div class="container">
             <div class="section-header" data-reveal="up">
-                <div class="section-tag">Agenda</div>
-                <h2 class="section-title">Nos <em>événements</em></h2>
-                <p class="section-desc">Rencontres, lectures, dédicaces : retrouvez-nous en chair et en os.</p>
+                <div class="section-tag">{{ accueil.evenementsTag }}</div>
+                <h2 class="section-title">{{ accueil.evenementsTitre | safe }}</h2>
+                <p class="section-desc">{{ accueil.evenementsDesc }}</p>
             </div>
 
             <div class="events-grid">
@@ -103,9 +103,9 @@ permalink: /
     <section class="catalogue" id="blog-apercu">
         <div class="container">
             <div class="section-header" data-reveal="up">
-                <div class="section-tag">Le blog</div>
-                <h2 class="section-title">Nos <em>actualités</em></h2>
-                <p class="section-desc">Interviews, coulisses de l'édition et actualités littéraires.</p>
+                <div class="section-tag">{{ accueil.blogTag }}</div>
+                <h2 class="section-title">{{ accueil.blogTitre | safe }}</h2>
+                <p class="section-desc">{{ accueil.blogDesc }}</p>
             </div>
 
             <div class="articles-grid">
@@ -125,9 +125,9 @@ permalink: /
     <section class="events" id="adhesion-cta">
         <div class="container">
             <div class="section-header" data-reveal="up">
-                <div class="section-tag">Rejoignez-nous</div>
-                <h2 class="section-title">Devenez <em>adhérent</em></h2>
-                <p class="section-desc">Soutenez l'édition indépendante en Alsace. Adhérez à l'association et bénéficiez d'avantages exclusifs : tarifs réduits, avant-premières, invitations aux événements.</p>
+                <div class="section-tag">{{ accueil.adhesionTag }}</div>
+                <h2 class="section-title">{{ accueil.adhesionTitre | safe }}</h2>
+                <p class="section-desc">{{ accueil.adhesionDesc }}</p>
                 <div style="margin-top: 1.5rem;">
                     <a href="/adhesion/" class="btn btn-primary">Adhérer en ligne</a>
                 </div>

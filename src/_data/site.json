@@ -8,6 +8,14 @@
   "address": "15 rue Bastian, 67200 Strasbourg",
   "horaires": "Mardi au samedi, 10h - 18h",
   "snipcartApiKey": "YOUR_SNIPCART_PUBLIC_TEST_API_KEY",
+  "footerDesc": "Maison d'édition indépendante et associative, installée à Strasbourg. Nous publions des textes qui font souffler un vent nouveau sur la littérature.",
+  "copyright": "Du vent dans les pages — Association de droit local — Strasbourg",
+  "creditDev": "Emmanuel Pinglier",
+  "directeurPublication": "Didier Smigiel",
+  "statutJuridique": "Association de droit local (articles 21 à 79-III du Code civil local)",
+  "siren": "999 408 149",
+  "siret": "999 408 149 00014",
+  "tvaIntra": "FR49999408149",
   "social": {
     "instagram": "#",
     "facebook": "#"

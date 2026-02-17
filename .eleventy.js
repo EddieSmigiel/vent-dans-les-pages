@@ -85,6 +85,9 @@ module.exports = function (eleventyConfig) {
     return words.join(" ") + (words.length >= 30 ? "…" : "");
   });
 
+  // Année courante (pour le copyright)
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   // ── Collections ───────────────────────────────────────
 
   // Livres : triés par date décroissante
