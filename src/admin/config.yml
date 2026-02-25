@@ -20,130 +20,136 @@ collections:
         label: "Infos générales"
         file: "src/_data/site.json"
         fields:
-          - { label: "Nom du site", name: "name", widget: "string", hint: "Actuel : Du vent dans les pages" }
-          - { label: "Slogan", name: "tagline", widget: "string", hint: "Actuel : Association & Maison d'édition" }
-          - { label: "Description SEO", name: "description", widget: "text", hint: "Actuel : Du vent dans les pages, association et maison d'édition indépendante à Strasbourg…" }
-          - { label: "URL du site", name: "url", widget: "string", hint: "Actuel : https://duventdanslespages.fr" }
-          - { label: "E-mail", name: "email", widget: "string", hint: "Actuel : contact@duventdanslespages.fr" }
-          - { label: "Téléphone", name: "phone", widget: "string", hint: "Actuel : 06 68 06 76 61" }
-          - { label: "Adresse", name: "address", widget: "string", hint: "Actuel : 15 rue Bastian, 67200 Strasbourg" }
-          - { label: "Horaires", name: "horaires", widget: "string", hint: "Actuel : Mardi au samedi, 10h - 18h" }
-          - { label: "Clé API Snipcart", name: "snipcartApiKey", widget: "string", hint: "Clé publique Snipcart (commence par st_ ou pk_)" }
-          - { label: "Description footer", name: "footerDesc", widget: "text", hint: "Actuel : Maison d'édition indépendante et associative, installée à Strasbourg…" }
-          - { label: "Copyright (sans l'année)", name: "copyright", widget: "string", hint: "Actuel : Du vent dans les pages — Association de droit local — Strasbourg" }
-          - { label: "Crédit développeur", name: "creditDev", widget: "string", hint: "Actuel : Emmanuel Pinglier" }
-          - { label: "Directeur de la publication", name: "directeurPublication", widget: "string", hint: "Actuel : Didier Smigiel" }
-          - { label: "Statut juridique", name: "statutJuridique", widget: "string", hint: "Actuel : Association de droit local (articles 21 à 79-III du Code civil local)" }
-          - { label: "SIREN", name: "siren", widget: "string", hint: "Actuel : 999 408 149" }
-          - { label: "SIRET", name: "siret", widget: "string", hint: "Actuel : 999 408 149 00014" }
-          - { label: "N° TVA intracommunautaire", name: "tvaIntra", widget: "string", hint: "Actuel : FR49999408149" }
+          - { label: "Nom du site", name: "name", widget: "string", required: false, hint: "Actuel : Du vent dans les pages" }
+          - { label: "Slogan", name: "tagline", widget: "string", required: false, hint: "Actuel : Association & Maison d'édition" }
+          - { label: "Description SEO", name: "description", widget: "text", required: false, hint: "Actuel : Du vent dans les pages, association et maison d'édition indépendante à Strasbourg…" }
+          - { label: "URL du site", name: "url", widget: "string", required: false, hint: "Actuel : https://duventdanslespages.fr" }
+          - { label: "E-mail", name: "email", widget: "string", required: false, hint: "Actuel : contact@duventdanslespages.fr" }
+          - { label: "Téléphone", name: "phone", widget: "string", required: false, hint: "Actuel : 06 68 06 76 61" }
+          - { label: "Adresse", name: "address", widget: "string", required: false, hint: "Actuel : 15 rue Bastian, 67200 Strasbourg" }
+          - { label: "Horaires", name: "horaires", widget: "string", required: false, hint: "Actuel : Mardi au samedi, 10h - 18h" }
+          - { label: "Clé API Snipcart", name: "snipcartApiKey", widget: "string", required: false, hint: "Clé publique Snipcart (commence par st_ ou pk_)" }
+          - { label: "Description footer", name: "footerDesc", widget: "text", required: false, hint: "Actuel : Maison d'édition indépendante et associative, installée à Strasbourg…" }
+          - { label: "Copyright (sans l'année)", name: "copyright", widget: "string", required: false, hint: "Actuel : Du vent dans les pages — Association de droit local — Strasbourg" }
+          - { label: "Crédit développeur", name: "creditDev", widget: "string", required: false, hint: "Actuel : Emmanuel Pinglier" }
+          - { label: "Directeur de la publication", name: "directeurPublication", widget: "string", required: false, hint: "Actuel : Didier Smigiel" }
+          - { label: "Statut juridique", name: "statutJuridique", widget: "string", required: false, hint: "Actuel : Association de droit local (articles 21 à 79-III du Code civil local)" }
+          - { label: "SIREN", name: "siren", widget: "string", required: false, hint: "Actuel : 999 408 149" }
+          - { label: "SIRET", name: "siret", widget: "string", required: false, hint: "Actuel : 999 408 149 00014" }
+          - { label: "N° TVA intracommunautaire", name: "tvaIntra", widget: "string", required: false, hint: "Actuel : FR49999408149" }
           - label: "Réseaux sociaux"
             name: "social"
             widget: "object"
+            required: false
             fields:
-              - { label: "Instagram", name: "instagram", widget: "string", hint: "URL du profil Instagram" }
-              - { label: "Facebook", name: "facebook", widget: "string", hint: "URL de la page Facebook" }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false, hint: "URL du profil Instagram" }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false, hint: "URL de la page Facebook" }
 
       - name: "accueil"
         label: "Page d'accueil"
         file: "src/_data/accueil.json"
         fields:
-          - { label: "Badge hero", name: "heroBadge", widget: "string", hint: "Actuel : Maison d'édition strasbourgeoise" }
-          - { label: "Description hero", name: "heroDesc", widget: "text", hint: "Actuel : Association et maison d'édition indépendante à Strasbourg. Nous publions des voix singulières…" }
-          - { label: "Vedette — étiquette", name: "vedetteTag", widget: "string", hint: "Actuel : Boutique en ligne" }
-          - { label: "Vedette — titre (HTML autorisé)", name: "vedetteTitre", widget: "string", hint: "Actuel : Nos <em>coups de cœur</em>" }
-          - { label: "Vedette — description", name: "vedetteDesc", widget: "text", hint: "Actuel : Nos ouvrages phares, sélectionnés par l'équipe." }
-          - { label: "Événements — étiquette", name: "evenementsTag", widget: "string", hint: "Actuel : Agenda" }
-          - { label: "Événements — titre (HTML autorisé)", name: "evenementsTitre", widget: "string", hint: "Actuel : Nos <em>événements</em>" }
-          - { label: "Événements — description", name: "evenementsDesc", widget: "text", hint: "Actuel : Rencontres, lectures, dédicaces : retrouvez-nous en chair et en os." }
-          - { label: "Blog — étiquette", name: "blogTag", widget: "string", hint: "Actuel : Le blog" }
-          - { label: "Blog — titre (HTML autorisé)", name: "blogTitre", widget: "string", hint: "Actuel : Nos <em>actualités</em>" }
-          - { label: "Blog — description", name: "blogDesc", widget: "text", hint: "Actuel : Interviews, coulisses de l'édition et actualités littéraires." }
-          - { label: "Adhésion — étiquette", name: "adhesionTag", widget: "string", hint: "Actuel : Rejoignez-nous" }
-          - { label: "Adhésion — titre (HTML autorisé)", name: "adhesionTitre", widget: "string", hint: "Actuel : Devenez <em>adhérent</em>" }
-          - { label: "Adhésion — description", name: "adhesionDesc", widget: "text", hint: "Actuel : Soutenez l'édition indépendante en Alsace. Adhérez à l'association…" }
+          - { label: "Badge hero", name: "heroBadge", widget: "string", required: false, hint: "Actuel : Maison d'édition strasbourgeoise" }
+          - { label: "Description hero", name: "heroDesc", widget: "text", required: false, hint: "Actuel : Association et maison d'édition indépendante à Strasbourg. Nous publions des voix singulières…" }
+          - { label: "Vedette — étiquette", name: "vedetteTag", widget: "string", required: false, hint: "Actuel : Boutique en ligne" }
+          - { label: "Vedette — titre (HTML autorisé)", name: "vedetteTitre", widget: "string", required: false, hint: "Actuel : Nos <em>coups de cœur</em>" }
+          - { label: "Vedette — description", name: "vedetteDesc", widget: "text", required: false, hint: "Actuel : Nos ouvrages phares, sélectionnés par l'équipe." }
+          - { label: "Événements — étiquette", name: "evenementsTag", widget: "string", required: false, hint: "Actuel : Agenda" }
+          - { label: "Événements — titre (HTML autorisé)", name: "evenementsTitre", widget: "string", required: false, hint: "Actuel : Nos <em>événements</em>" }
+          - { label: "Événements — description", name: "evenementsDesc", widget: "text", required: false, hint: "Actuel : Rencontres, lectures, dédicaces : retrouvez-nous en chair et en os." }
+          - { label: "Blog — étiquette", name: "blogTag", widget: "string", required: false, hint: "Actuel : Le blog" }
+          - { label: "Blog — titre (HTML autorisé)", name: "blogTitre", widget: "string", required: false, hint: "Actuel : Nos <em>actualités</em>" }
+          - { label: "Blog — description", name: "blogDesc", widget: "text", required: false, hint: "Actuel : Interviews, coulisses de l'édition et actualités littéraires." }
+          - { label: "Adhésion — étiquette", name: "adhesionTag", widget: "string", required: false, hint: "Actuel : Rejoignez-nous" }
+          - { label: "Adhésion — titre (HTML autorisé)", name: "adhesionTitre", widget: "string", required: false, hint: "Actuel : Devenez <em>adhérent</em>" }
+          - { label: "Adhésion — description", name: "adhesionDesc", widget: "text", required: false, hint: "Actuel : Soutenez l'édition indépendante en Alsace. Adhérez à l'association…" }
 
       - name: "association"
         label: "Page association"
         file: "src/_data/association.json"
         fields:
-          - { label: "Citation", name: "citation", widget: "string", hint: "Actuel : Les livres sont des portes que l'on ouvre avec le vent de la curiosité." }
-          - { label: "Source de la citation", name: "citationSource", widget: "string", hint: "Actuel : Devise de l'association" }
-          - { label: "Titre présentation", name: "presentationTitre", widget: "string", hint: "Actuel : Une maison d'édition associative, ancrée à Strasbourg" }
-          - { label: "Paragraphe 1 (HTML autorisé)", name: "presentationTexte1", widget: "text", hint: "Actuel : Fondée en 2025, Du vent dans les pages est née de la passion commune…" }
-          - { label: "Paragraphe 2 (HTML autorisé)", name: "presentationTexte2", widget: "text", hint: "Actuel : Nous croyons que chaque texte mérite un souffle, chaque voix un espace…" }
+          - { label: "Citation", name: "citation", widget: "string", required: false, hint: "Actuel : Les livres sont des portes que l'on ouvre avec le vent de la curiosité." }
+          - { label: "Source de la citation", name: "citationSource", widget: "string", required: false, hint: "Actuel : Devise de l'association" }
+          - { label: "Titre présentation", name: "presentationTitre", widget: "string", required: false, hint: "Actuel : Une maison d'édition associative, ancrée à Strasbourg" }
+          - { label: "Paragraphe 1 (HTML autorisé)", name: "presentationTexte1", widget: "text", required: false, hint: "Actuel : Fondée en 2025, Du vent dans les pages est née de la passion commune…" }
+          - { label: "Paragraphe 2 (HTML autorisé)", name: "presentationTexte2", widget: "text", required: false, hint: "Actuel : Nous croyons que chaque texte mérite un souffle, chaque voix un espace…" }
           - label: "Statistiques"
             name: "stats"
             widget: "list"
+            required: false
             max: 3
             min: 3
             hint: "Actuels : 24 Ouvrages publiés / 12 Auteurs édités / 6 Années d'existence"
             fields:
-              - { label: "Nombre", name: "nombre", widget: "string" }
-              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Nombre", name: "nombre", widget: "string", required: false }
+              - { label: "Label", name: "label", widget: "string", required: false }
           - label: "Valeurs"
             name: "valeurs"
             widget: "list"
+            required: false
             max: 4
             min: 4
             hint: "Actuelles : Édition soignée / Engagement local / Diversité littéraire / Rencontres"
             fields:
-              - { label: "Icône (emoji)", name: "icone", widget: "string" }
-              - { label: "Titre", name: "titre", widget: "string" }
-              - { label: "Description", name: "texte", widget: "text" }
-          - { label: "Section équipe — étiquette", name: "equipeTag", widget: "string", hint: "Actuel : L'équipe" }
-          - { label: "Section équipe — titre (HTML autorisé)", name: "equipeTitre", widget: "string", hint: "Actuel : Qui sommes-<em>nous</em> ?" }
-          - { label: "Section équipe — introduction", name: "equipeIntro", widget: "text", hint: "Actuel : L'association est animée par une équipe de bénévoles passionnés de littérature…" }
+              - { label: "Icône (emoji)", name: "icone", widget: "string", required: false }
+              - { label: "Titre", name: "titre", widget: "string", required: false }
+              - { label: "Description", name: "texte", widget: "text", required: false }
+          - { label: "Section équipe — étiquette", name: "equipeTag", widget: "string", required: false, hint: "Actuel : L'équipe" }
+          - { label: "Section équipe — titre (HTML autorisé)", name: "equipeTitre", widget: "string", required: false, hint: "Actuel : Qui sommes-<em>nous</em> ?" }
+          - { label: "Section équipe — introduction", name: "equipeIntro", widget: "text", required: false, hint: "Actuel : L'association est animée par une équipe de bénévoles passionnés de littérature…" }
           - label: "Bureau"
             name: "equipe"
             widget: "list"
+            required: false
             max: 5
             hint: "Actuels : Présidente / Trésorière / Secrétaire"
             fields:
-              - { label: "Rôle", name: "role", widget: "string" }
-              - { label: "Nom", name: "nom", widget: "string" }
-          - { label: "Texte comité de lecture", name: "comiteLecture", widget: "text", hint: "Actuel : Le comité de lecture, composé de cinq membres, se réunit chaque trimestre…" }
+              - { label: "Rôle", name: "role", widget: "string", required: false }
+              - { label: "Nom", name: "nom", widget: "string", required: false }
+          - { label: "Texte comité de lecture", name: "comiteLecture", widget: "text", required: false, hint: "Actuel : Le comité de lecture, composé de cinq membres, se réunit chaque trimestre…" }
 
       - name: "adhesion"
         label: "Page adhésion"
         file: "src/_data/adhesion.json"
         fields:
-          - { label: "Titre section avantages", name: "avantagesTitre", widget: "string", hint: "Actuel : Pourquoi adhérer ?" }
+          - { label: "Titre section avantages", name: "avantagesTitre", widget: "string", required: false, hint: "Actuel : Pourquoi adhérer ?" }
           - label: "Avantages"
             name: "avantages"
             widget: "list"
+            required: false
             max: 6
             hint: "Actuels : -10% sur le catalogue / Avant-premières / Invitations VIP / Soutien à la création"
             fields:
-              - { label: "Icône (code HTML)", name: "icone", widget: "string", hint: "Ex : &#128230; pour 📦" }
-              - { label: "Titre", name: "titre", widget: "string" }
-              - { label: "Description", name: "texte", widget: "text" }
-          - { label: "Formules — étiquette", name: "formulesTag", widget: "string", hint: "Actuel : Cotisation annuelle" }
-          - { label: "Formules — titre (HTML autorisé)", name: "formulesTitre", widget: "string", hint: "Actuel : Les <em>formules</em>" }
+              - { label: "Icône (code HTML)", name: "icone", widget: "string", required: false, hint: "Ex : &#128230; pour 📦" }
+              - { label: "Titre", name: "titre", widget: "string", required: false }
+              - { label: "Description", name: "texte", widget: "text", required: false }
+          - { label: "Formules — étiquette", name: "formulesTag", widget: "string", required: false, hint: "Actuel : Cotisation annuelle" }
+          - { label: "Formules — titre (HTML autorisé)", name: "formulesTitre", widget: "string", required: false, hint: "Actuel : Les <em>formules</em>" }
           - label: "Formules"
             name: "formules"
             widget: "list"
+            required: false
             max: 5
             hint: "Actuelles : Individuel 15 € / Bienfaiteur 30 € / Soutien 50 €"
             fields:
-              - { label: "Nom", name: "nom", widget: "string" }
-              - { label: "Prix (ex: 15,00)", name: "prix", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-          - { label: "HelloAsso — étiquette", name: "helloassoTag", widget: "string", hint: "Actuel : Adhérer en ligne" }
-          - { label: "HelloAsso — titre (HTML autorisé)", name: "helloassoTitre", widget: "string", hint: "Actuel : Adhésion via <em>HelloAsso</em>" }
-          - { label: "HelloAsso — description", name: "helloassoDesc", widget: "text", hint: "Actuel : Réglez votre cotisation en ligne de manière sécurisée via HelloAsso…" }
-          - { label: "HelloAsso — texte placeholder", name: "helloassoPlaceholder", widget: "text", hint: "Actuel : Le formulaire d'adhésion sera intégré ici une fois le compte HelloAsso configuré." }
-          - { label: "HelloAsso — texte de repli", name: "helloassoFallback", widget: "text", hint: "Actuel : En attendant, vous pouvez adhérer en nous contactant directement par email à" }
+              - { label: "Nom", name: "nom", widget: "string", required: false }
+              - { label: "Prix (ex: 15,00)", name: "prix", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "HelloAsso — étiquette", name: "helloassoTag", widget: "string", required: false, hint: "Actuel : Adhérer en ligne" }
+          - { label: "HelloAsso — titre (HTML autorisé)", name: "helloassoTitre", widget: "string", required: false, hint: "Actuel : Adhésion via <em>HelloAsso</em>" }
+          - { label: "HelloAsso — description", name: "helloassoDesc", widget: "text", required: false, hint: "Actuel : Réglez votre cotisation en ligne de manière sécurisée via HelloAsso…" }
+          - { label: "HelloAsso — texte placeholder", name: "helloassoPlaceholder", widget: "text", required: false, hint: "Actuel : Le formulaire d'adhésion sera intégré ici une fois le compte HelloAsso configuré." }
+          - { label: "HelloAsso — texte de repli", name: "helloassoFallback", widget: "text", required: false, hint: "Actuel : En attendant, vous pouvez adhérer en nous contactant directement par email à" }
 
       - name: "contact"
         label: "Page contact"
         file: "src/_data/contact.json"
         fields:
-          - { label: "Description (HTML autorisé)", name: "description", widget: "text", hint: "Actuel : Association de droit local & maison d'édition indépendante, installée au cœur de Strasbourg." }
-          - { label: "Titre du formulaire", name: "formeTitre", widget: "string", hint: "Actuel : Envoyez-nous un message" }
-          - { label: "Manuscrit — étiquette", name: "manuscritTag", widget: "string", hint: "Actuel : Auteurs" }
-          - { label: "Manuscrit — titre (HTML autorisé)", name: "manuscritTitre", widget: "string", hint: "Actuel : Soumettre un <em>manuscrit</em>" }
-          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "text", hint: "Actuel : Vous écrivez ? Envoyez-nous votre texte. Notre comité de lecture examine chaque manuscrit avec attention." }
+          - { label: "Description (HTML autorisé)", name: "description", widget: "text", required: false, hint: "Actuel : Association de droit local & maison d'édition indépendante, installée au cœur de Strasbourg." }
+          - { label: "Titre du formulaire", name: "formeTitre", widget: "string", required: false, hint: "Actuel : Envoyez-nous un message" }
+          - { label: "Manuscrit — étiquette", name: "manuscritTag", widget: "string", required: false, hint: "Actuel : Auteurs" }
+          - { label: "Manuscrit — titre (HTML autorisé)", name: "manuscritTitre", widget: "string", required: false, hint: "Actuel : Soumettre un <em>manuscrit</em>" }
+          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "text", required: false, hint: "Actuel : Vous écrivez ? Envoyez-nous votre texte. Notre comité de lecture examine chaque manuscrit avec attention." }
 
   - name: "livres"
     label: "Livres"

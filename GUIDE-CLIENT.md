@@ -139,30 +139,40 @@ Remplacez `votre-site.netlify.app` par l'adresse réelle de votre site Netlify.
 
 Snipcart gère le panier d'achat et les paiements sur votre site. C'est payant uniquement quand vous réalisez des ventes (2 % de commission par transaction).
 
+### 6.1 — Créer votre compte Snipcart
+
 1. Allez sur https://snipcart.com
 2. Cliquez **Sign up** et créez votre compte
-3. Une fois connecté, allez dans **Account** > **API Keys**
-4. Copiez votre **Public API Key** (elle commence par un long code)
-5. Communiquez cette clé à votre développeur
+3. Confirmez votre email
 
-**Ce que fera le développeur** : il remplacera la clé de test dans le fichier de configuration du site par votre vraie clé. Cela prend 2 minutes.
+### 6.2 — Récupérer votre clé API publique
 
-**Ou faites-le vous-même** via le CMS :
-- Ce paramètre ne se change pas via le CMS. Il faudra modifier le fichier `src/_data/site.json` sur GitHub :
-  1. Allez sur votre dépôt GitHub
-  2. Naviguez vers `src/_data/site.json`
-  3. Cliquez sur l'icône crayon (modifier)
-  4. Remplacez `YOUR_SNIPCART_PUBLIC_TEST_API_KEY` par votre vraie clé
-  5. Cliquez **Commit changes**
-  6. Le site se reconstruit automatiquement
+1. Connectez-vous à votre tableau de bord Snipcart
+2. Allez dans **Account** > **API Keys**
+3. Copiez votre **Public API Key** (elle commence par un long code)
 
-### Configuration Snipcart
+### 6.3 — Entrer la clé API dans votre site
 
-Dans le tableau de bord Snipcart :
-1. **Domains & URLs** : ajoutez votre domaine (`duventdanslespages.fr`)
-2. **Payment gateway** : connectez votre compte Stripe (Snipcart vous guidera)
+Vous pouvez le faire directement via le CMS :
+
+1. Allez sur `votre-site.fr/admin/`
+2. Connectez-vous
+3. Dans le menu de gauche, cliquez **Paramètres** > **Infos générales**
+4. Trouvez le champ **Clé API Snipcart**
+5. Collez votre clé publique
+6. Cliquez **Publier** en haut à droite
+7. Le site se reconstruit automatiquement (environ 30 secondes)
+
+### 6.4 — Configurer Snipcart
+
+Dans le tableau de bord Snipcart (sur snipcart.com) :
+
+1. **Domains & URLs** : ajoutez votre domaine (`duventdanslespages.fr`) — c'est indispensable pour que le panier fonctionne en production
+2. **Payment gateway** : connectez votre compte Stripe (Snipcart vous guidera pas à pas)
 3. **Shipping** : configurez les frais de livraison (poids, zones, tarifs)
 4. **Taxes** : vérifiez que la TVA à 5,5 % est bien configurée pour les livres en France
+
+**Important** : tant que vous n'avez pas ajouté votre domaine dans Snipcart (étape 1 ci-dessus), le panier ne fonctionnera pas sur votre site en production.
 
 ---
 
