@@ -1,23 +1,23 @@
 {
   "siren": "999 408 149",
   "statutJuridique": "Association de droit local (articles 21 à 79-III du Code civil local)",
-  "snipcartApiKey": "YOUR_SNIPCART_PUBLIC_TEST_API_KEY",
+  "snipcartApiKey": "NTBjNjUxZTMtYjQ3Ni00MTBjLWEzMDctNmMyMmE3NTFiNzhhNjM5MDc2MjQwMDE3MjMyNzIz",
   "copyright": "Du vent dans les pages — Association de droit local — Strasbourg",
   "siret": "999 408 149 00014",
   "name": "Test",
-  "footerDesc": "Maison d'édition indépendante et associative, installée à Strasbourg. Nous publions des textes qui font souffler un vent nouveau sur la littérature.",
+  "footerDesc": "Maison d’édition indépendante, associative et engagée, implantée à Strasbourg.\nNous publions des textes qui insufflent un regard neuf sur la littérature contemporaine. Notre ligne éditoriale, en littérature générale, repose sur une démarche originale, transparente et rigoureusement éthique.\nLes manuscrits sont soumis à un comité de lecture et examinés de manière anonymisée. Chaque texte est évalué par au moins deux lecteurs selon des critères critiques explicites, et l’analyse détaillée est systématiquement transmise à l’auteur.",
   "horaires": "Mardi au samedi, 10h - 18h",
   "social": {
     "instagram": "#",
     "facebook": "#"
   },
   "phone": "06 68 06 76 61",
-  "tagline": "Association & Maison d'édition",
+  "tagline": "Association & Maison d'édition éthique",
   "url": "https://duventdanslespages.fr",
-  "directeurPublication": "Didier Smigiel",
+  "directeurPublication": "Eddie Smigiel",
   "address": "15 rue Bastian, 67200 Strasbourg",
   "creditDev": "Emmanuel Pinglier",
   "email": "contact@duventdanslespages.fr",
-  "description": "Du vent dans les pages, association et maison d'édition indépendante à Strasbourg. Découvrez notre catalogue et commandez en ligne.",
+  "description": "Du vent dans les pages, association et maison d'édition indépendante et éthique à Strasbourg. Découvrez notre catalogue et commandez en ligne.",
   "tvaIntra": "FR49999408149"
 }
