@@ -1,27 +1,61 @@
 {
-  "citation": "Les livres sont des portes que l'on ouvre avec le vent de la curiosité.",
-  "citationSource": "Devise de l'association",
-  "presentationTitre": "Une maison d'édition associative, ancrée à Strasbourg",
-  "presentationTexte1": "Fondée en 2025, <strong>Du vent dans les pages</strong> est née de la passion commune de lecteurs et d'auteurs strasbourgeois pour la littérature vivante. Notre association porte une maison d'édition indépendante qui publie poésie, récits, essais et littérature jeunesse.",
-  "presentationTexte2": "Nous croyons que chaque texte mérite un souffle, chaque voix un espace. Nos éditions sont soignées, nos tirages raisonnés, notre démarche engagée pour une édition à taille humaine.",
-  "stats": [
-    { "nombre": "24", "label": "Ouvrages publiés" },
-    { "nombre": "12", "label": "Auteurs édités" },
-    { "nombre": "6", "label": "Années d'existence" }
-  ],
-  "valeurs": [
-    { "icone": "✍", "titre": "Édition soignée", "texte": "Chaque ouvrage est travaillé avec soin, du manuscrit à l'impression." },
-    { "icone": "🌱", "titre": "Engagement local", "texte": "Imprimé en Alsace, diffusé dans les librairies indépendantes." },
-    { "icone": "📚", "titre": "Diversité littéraire", "texte": "Poésie, romans, essais, jeunesse : toutes les voix comptent." },
-    { "icone": "🎨", "titre": "Rencontres", "texte": "Lectures, ateliers, dédicaces : la littérature se vit ensemble." }
-  ],
+  "citationSource": "Quand le vent tourne les pages.",
   "equipeTag": "L'équipe",
-  "equipeTitre": "Qui sommes-<em>nous</em> ?",
-  "equipeIntro": "L'association est animée par une équipe de bénévoles passionnés de littérature. Le bureau se compose de :",
-  "equipe": [
-    { "role": "Présidente", "nom": "[Nom de la présidente]" },
-    { "role": "Trésorière", "nom": "[Nom de la trésorière]" },
-    { "role": "Secrétaire", "nom": "[Nom du/de la secrétaire]" }
+  "comiteLecture": "Chez Du vent dans les pages, nous sommes convaincus que chaque texte mérite d’être lu avec attention et que chaque voix doit pouvoir trouver sa chance.\n\nNotre maison s’appuie pour cela sur un procédé éditorial original. Chaque manuscrit reçu est d’abord anonymisé avant d’être soumis à la lecture de notre comité éditorial, aujourd’hui composé de sept membres – auteurs, lecteurs et éditeurs. Afin de garantir la qualité et l’équité de l’évaluation, chaque texte est examiné par au moins deux lecteurs du comité.\n\nCette méthode permet de concentrer l’attention sur l’essentiel : la qualité littéraire du manuscrit. Elle repose également sur un principe simple : chaque auteur reçoit les fiches d’évaluation rédigées par les lecteurs. Ce retour critique, structuré et argumenté, est transmis dans tous les cas, que le manuscrit soit retenu pour publication ou non.\n\nEnfin, Du vent dans les pages est aussi un projet collectif et ouvert. En adhérant à l’association, chacun peut proposer sa candidature pour rejoindre le comité de lecture et participer à cette aventure éditoriale.",
+  "citation": "« Le vent se lève… il faut tenter de vivre. » — Paul Valéry",
+  "valeurs": [
+    {
+      "icone": "✍",
+      "titre": "Édition soignée",
+      "texte": "Chaque ouvrage est travaillé avec soin, du manuscrit à l'impression."
+    },
+    {
+      "icone": "🌱",
+      "titre": "Engagement local",
+      "texte": "Imprimé en Alsace, diffusé dans les librairies indépendantes."
+    },
+    {
+      "icone": "📚",
+      "titre": "Diversité littéraire",
+      "texte": "Poésie, romans, essais, jeunesse : toutes les voix comptent."
+    },
+    {
+      "icone": "🎨",
+      "titre": "Rencontres",
+      "texte": "Lectures, ateliers, dédicaces : la littérature se vit ensemble."
+    }
   ],
-  "comiteLecture": "Le comité de lecture, composé de cinq membres, se réunit chaque trimestre pour examiner les manuscrits reçus. Notre objectif : publier 4 à 6 ouvrages par an, dans le respect des auteurs et des lecteurs."
+  "presentationTexte1": "Fondée en 2025, <strong>Du vent dans les pages</strong> est née de la passion commune de lecteurs et d'auteurs strasbourgeois pour la littérature vivante. Notre association porte une maison d'édition indépendante qui publie de la littérature générale.",
+  "presentationTexte2": "Nous croyons que chaque texte mérite un souffle et chaque voix un espace. Notre procédé éditorial original accompagne les œuvres avec attention : des éditions soignées, des tirages raisonnés et une volonté constante de défendre une édition à taille humaine.",
+  "equipe": [
+    {
+      "role": "Présidente",
+      "nom": "[Nom de la présidente]"
+    },
+    {
+      "role": "Trésorière",
+      "nom": "[Nom de la trésorière]"
+    },
+    {
+      "role": "Secrétaire",
+      "nom": "[Nom du/de la secrétaire]"
+    }
+  ],
+  "equipeIntro": "L'association est animée par une équipe de bénévoles passionnés de littérature. Le bureau se compose de :\nEddie Smigiel, président ;\nDidier Smigiel, secrétaire ;\nMarc Védrines, trésorier.",
+  "presentationTitre": "Une maison d'édition associative et éthique, ancrée à Strasbourg",
+  "equipeTitre": "Qui sommes-<em>nous</em> ?",
+  "stats": [
+    {
+      "nombre": "24",
+      "label": "Ouvrages publiés"
+    },
+    {
+      "nombre": "12",
+      "label": "Auteurs édités"
+    },
+    {
+      "nombre": "6",
+      "label": "Années d'existence"
+    }
+  ]
 }
