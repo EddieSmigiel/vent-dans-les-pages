@@ -29,16 +29,16 @@
   "presentationTexte2": "Nous croyons que chaque texte mérite un souffle et chaque voix un espace. Notre procédé éditorial original accompagne les œuvres avec attention : des éditions soignées, des tirages raisonnés et une volonté constante de défendre une édition à taille humaine.",
   "equipe": [
     {
-      "role": "Présidente",
-      "nom": "[Nom de la présidente]"
+      "role": "Président",
+      "nom": "Eddie Smigiel"
     },
     {
-      "role": "Trésorière",
-      "nom": "[Nom de la trésorière]"
+      "role": "Trésorier",
+      "nom": "Marc Védrines"
     },
     {
       "role": "Secrétaire",
-      "nom": "[Nom du/de la secrétaire]"
+      "nom": "Didier Smigiel"
     }
   ],
   "equipeIntro": "L'association est animée par une équipe de bénévoles passionnés de littérature. Le bureau se compose de :\nEddie Smigiel, président ;\nDidier Smigiel, secrétaire ;\nMarc Védrines, trésorier.",
