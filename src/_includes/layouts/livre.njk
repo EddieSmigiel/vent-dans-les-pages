@@ -21,6 +21,9 @@ layout: layouts/base.njk
         <div class="container">
             <div class="livre-grid">
                 <div class="livre-cover" data-reveal="left">
+                    {% if coverImage %}
+                    <img src="{{ coverImage }}" alt="Couverture de {{ title }}" class="book-cover-img">
+                    {% else %}
                     <div class="book-cover-art {{ coverClass or 'cover-1' }}">
                         <div class="book-cover-inner">
                             <div class="book-cover-title">{{ title }}</div>
@@ -28,6 +31,7 @@ layout: layouts/base.njk
                         </div>
                         <div class="book-cover-publisher">Du vent dans les pages</div>
                     </div>
+                    {% endif %}
                 </div>
 
                 <div class="livre-info" data-reveal="right">

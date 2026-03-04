@@ -45,20 +45,18 @@ permalink: /adhesion/
 <section class="catalogue">
     <div class="container">
         <div class="section-header" data-reveal="up">
-            <div class="section-tag">{{ adhesion.helloassoTag }}</div>
-            <h2 class="section-title">{{ adhesion.helloassoTitre | safe }}</h2>
-            <p class="section-desc">{{ adhesion.helloassoDesc }}</p>
+            <div class="section-tag">{{ adhesion.adhesionTag }}</div>
+            <h2 class="section-title">{{ adhesion.adhesionTitre | safe }}</h2>
+            <p class="section-desc">{{ adhesion.adhesionDesc }}</p>
         </div>
-        <div class="adhesion-widget" data-reveal="up">
-            <div style="background: var(--cream); border: 2px dashed var(--green-light); border-radius: 12px; padding: 3rem; text-align: center;">
-                <p style="font-size: 1.1rem; color: var(--green);">
-                    <strong>Widget HelloAsso</strong><br>
-                    {{ adhesion.helloassoPlaceholder }}
-                </p>
-                <p style="margin-top: 1rem; color: var(--text-light);">
-                    {{ adhesion.helloassoFallback }} <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-                </p>
-            </div>
+        <div data-reveal="up" style="text-align: center; margin-top: 2rem;">
+            <a href="mailto:{{ site.email }}?subject=Demande d'adhésion" class="btn btn-primary">
+                {{ adhesion.adhesionBouton }}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </a>
         </div>
     </div>
 </section>

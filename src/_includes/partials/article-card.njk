@@ -1,5 +1,10 @@
 {% set ad = articleData or article.data %}
-<article class="article-card" data-reveal="up" data-delay="{{ loop.index0 % 3 }}">
+<article class="article-card{% if ad.image %} article-card--has-image{% endif %}" data-reveal="up" data-delay="{{ loop.index0 % 3 }}">
+    {% if ad.image %}
+    <a href="{{ article.url }}" class="article-card-image">
+        <img src="{{ ad.image }}" alt="{{ ad.title }}" loading="lazy">
+    </a>
+    {% endif %}
     <div class="article-card-body">
         {% if ad.categorie %}
         <div class="section-tag">{{ ad.categorie }}</div>

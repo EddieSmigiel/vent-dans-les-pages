@@ -13,9 +13,8 @@
     { "nom": "Adhérent bienfaiteur", "prix": "30,00", "description": "Tous les avantages + un ouvrage offert parmi notre catalogue." },
     { "nom": "Adhérent soutien", "prix": "50,00", "description": "Tous les avantages + deux ouvrages offerts + mention dans nos publications." }
   ],
-  "helloassoTag": "Adhérer en ligne",
-  "helloassoTitre": "Adhésion via <em>HelloAsso</em>",
-  "helloassoDesc": "Réglez votre cotisation en ligne de manière sécurisée via HelloAsso, la plateforme de référence pour les associations.",
-  "helloassoPlaceholder": "Le formulaire d'adhésion sera intégré ici une fois le compte HelloAsso de l'association configuré.",
-  "helloassoFallback": "En attendant, vous pouvez adhérer en nous contactant directement par email à"
+  "adhesionTag": "Adhérer",
+  "adhesionTitre": "Comment <em>adhérer</em> ?",
+  "adhesionDesc": "Pour rejoindre l'association, il vous suffit de nous envoyer un email en précisant la formule choisie. Nous vous répondrons avec les modalités de paiement.",
+  "adhesionBouton": "Nous écrire pour adhérer"
 }

@@ -33,6 +33,12 @@ layout: layouts/base.njk
                 </div>
             </header>
 
+            {% if image %}
+            <div class="article-image" data-reveal="up">
+                <img src="{{ image }}" alt="{{ title }}">
+            </div>
+            {% endif %}
+
             <div class="prose" data-reveal="up">
                 {{ content | safe }}
             </div>

@@ -1,6 +1,9 @@
 {% set ld = livreData or livre.data %}
 <div class="book-card" data-genre="{{ ld.genre | lower | slug }}" data-price="{{ ld.prix }}" data-reveal="up" data-delay="{{ loop.index0 % 3 }}">
     <a href="/catalogue/{{ ld.slug or (ld.title | slug) }}/" class="book-cover">
+        {% if ld.coverImage %}
+        <img src="{{ ld.coverImage }}" alt="Couverture de {{ ld.title }}" class="book-cover-img">
+        {% else %}
         <div class="book-cover-art {{ ld.coverClass or 'cover-1' }}">
             <div class="book-cover-inner">
                 <div class="book-cover-title">{{ ld.title }}</div>
@@ -8,6 +11,7 @@
             </div>
             <div class="book-cover-publisher">Du vent dans les pages</div>
         </div>
+        {% endif %}
         {% if ld.badge %}
         <span class="book-badge">{{ ld.badge }}</span>
         {% endif %}

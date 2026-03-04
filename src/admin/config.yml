@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "src/images"
 public_folder: "/images"
 
@@ -21,23 +23,23 @@ collections:
         label: "Infos générales"
         file: "src/_data/site.json"
         fields:
-          - { label: "Nom du site", name: "name", widget: "string", required: false }
-          - { label: "Slogan", name: "tagline", widget: "string", required: false }
-          - { label: "Description SEO", name: "description", widget: "text", required: false }
+          - { label: "Nom du site", name: "name", widget: "string", required: false, hint: "Affiché dans l'en-tête, le pied de page et les onglets du navigateur" }
+          - { label: "Slogan", name: "tagline", widget: "string", required: false, hint: "Affiché sous le nom du site dans l'en-tête" }
+          - { label: "Description SEO", name: "description", widget: "text", required: false, hint: "Description qui apparaît dans les résultats Google" }
           - { label: "URL du site", name: "url", widget: "string", required: false }
-          - { label: "E-mail", name: "email", widget: "string", required: false }
-          - { label: "Téléphone", name: "phone", widget: "string", required: false }
-          - { label: "Adresse", name: "address", widget: "string", required: false }
-          - { label: "Horaires", name: "horaires", widget: "string", required: false }
-          - { label: "Clé API Snipcart", name: "snipcartApiKey", widget: "string", required: false, hint: "Clé publique Snipcart (commence par st_ ou pk_)" }
-          - { label: "Description footer", name: "footerDesc", widget: "text", required: false }
-          - { label: "Copyright (sans l'année)", name: "copyright", widget: "string", required: false }
+          - { label: "E-mail", name: "email", widget: "string", required: false, hint: "Affiché sur la page contact et utilisé pour le bouton d'adhésion" }
+          - { label: "Téléphone", name: "phone", widget: "string", required: false, hint: "Affiché sur la page contact" }
+          - { label: "Adresse", name: "address", widget: "string", required: false, hint: "Affiché sur la page contact et dans le pied de page" }
+          - { label: "Horaires", name: "horaires", widget: "string", required: false, hint: "Affiché sur la page contact" }
+          - { label: "Clé API Snipcart", name: "snipcartApiKey", widget: "string", required: false, hint: "Clé publique Snipcart (commence par st_ ou pk_). Nécessaire pour le panier d'achat" }
+          - { label: "Description footer", name: "footerDesc", widget: "text", required: false, hint: "Court texte affiché dans le pied de page en bas de chaque page" }
+          - { label: "Copyright (sans l'année)", name: "copyright", widget: "string", required: false, hint: "Texte copyright dans le pied de page (l'année est ajoutée automatiquement)" }
           - { label: "Crédit développeur", name: "creditDev", widget: "string", required: false }
-          - { label: "Directeur de la publication", name: "directeurPublication", widget: "string", required: false }
-          - { label: "Statut juridique", name: "statutJuridique", widget: "string", required: false }
-          - { label: "SIREN", name: "siren", widget: "string", required: false }
-          - { label: "SIRET", name: "siret", widget: "string", required: false }
-          - { label: "N° TVA intracommunautaire", name: "tvaIntra", widget: "string", required: false }
+          - { label: "Directeur de la publication", name: "directeurPublication", widget: "string", required: false, hint: "Affiché dans les mentions légales" }
+          - { label: "Statut juridique", name: "statutJuridique", widget: "string", required: false, hint: "Affiché dans les mentions légales" }
+          - { label: "SIREN", name: "siren", widget: "string", required: false, hint: "Affiché dans les mentions légales" }
+          - { label: "SIRET", name: "siret", widget: "string", required: false, hint: "Affiché dans les mentions légales" }
+          - { label: "N° TVA intracommunautaire", name: "tvaIntra", widget: "string", required: false, hint: "Affiché dans les mentions légales" }
           - label: "Réseaux sociaux"
             name: "social"
             widget: "object"
@@ -50,30 +52,30 @@ collections:
         label: "Page d'accueil"
         file: "src/_data/accueil.json"
         fields:
-          - { label: "Badge hero", name: "heroBadge", widget: "string", required: false }
-          - { label: "Description hero", name: "heroDesc", widget: "text", required: false }
-          - { label: "Vedette — étiquette", name: "vedetteTag", widget: "string", required: false }
-          - { label: "Vedette — titre (HTML autorisé)", name: "vedetteTitre", widget: "string", required: false }
-          - { label: "Vedette — description", name: "vedetteDesc", widget: "text", required: false }
-          - { label: "Événements — étiquette", name: "evenementsTag", widget: "string", required: false }
-          - { label: "Événements — titre (HTML autorisé)", name: "evenementsTitre", widget: "string", required: false }
-          - { label: "Événements — description", name: "evenementsDesc", widget: "text", required: false }
-          - { label: "Blog — étiquette", name: "blogTag", widget: "string", required: false }
-          - { label: "Blog — titre (HTML autorisé)", name: "blogTitre", widget: "string", required: false }
-          - { label: "Blog — description", name: "blogDesc", widget: "text", required: false }
-          - { label: "Adhésion — étiquette", name: "adhesionTag", widget: "string", required: false }
-          - { label: "Adhésion — titre (HTML autorisé)", name: "adhesionTitre", widget: "string", required: false }
-          - { label: "Adhésion — description", name: "adhesionDesc", widget: "text", required: false }
+          - { label: "Badge hero", name: "heroBadge", widget: "string", required: false, hint: "Petit texte affiché au-dessus du titre principal, en haut de la page d'accueil" }
+          - { label: "Description hero", name: "heroDesc", widget: "text", required: false, hint: "Texte d'introduction affiché sous le titre principal de la page d'accueil" }
+          - { label: "Vedette — étiquette", name: "vedetteTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section « En vedette »" }
+          - { label: "Vedette — titre (HTML autorisé)", name: "vedetteTitre", widget: "string", required: false, hint: "Titre de la section livres en vedette. Utiliser <em>mot</em> pour mettre en italique" }
+          - { label: "Vedette — description", name: "vedetteDesc", widget: "text", required: false, hint: "Texte sous le titre de la section « En vedette »" }
+          - { label: "Événements — étiquette", name: "evenementsTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section événements" }
+          - { label: "Événements — titre (HTML autorisé)", name: "evenementsTitre", widget: "string", required: false, hint: "Titre de la section événements sur l'accueil" }
+          - { label: "Événements — description", name: "evenementsDesc", widget: "text", required: false, hint: "Texte sous le titre de la section événements" }
+          - { label: "Blog — étiquette", name: "blogTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section blog" }
+          - { label: "Blog — titre (HTML autorisé)", name: "blogTitre", widget: "string", required: false, hint: "Titre de la section blog sur l'accueil" }
+          - { label: "Blog — description", name: "blogDesc", widget: "text", required: false, hint: "Texte sous le titre de la section blog" }
+          - { label: "Adhésion — étiquette", name: "adhesionTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section adhésion" }
+          - { label: "Adhésion — titre (HTML autorisé)", name: "adhesionTitre", widget: "string", required: false, hint: "Titre de la section adhésion sur l'accueil" }
+          - { label: "Adhésion — description", name: "adhesionDesc", widget: "text", required: false, hint: "Texte sous le titre de la section adhésion" }
 
       - name: "association"
         label: "Page association"
         file: "src/_data/association.json"
         fields:
-          - { label: "Citation", name: "citation", widget: "string", required: false }
-          - { label: "Source de la citation", name: "citationSource", widget: "string", required: false }
-          - { label: "Titre présentation", name: "presentationTitre", widget: "string", required: false }
-          - { label: "Paragraphe 1 (HTML autorisé)", name: "presentationTexte1", widget: "text", required: false }
-          - { label: "Paragraphe 2 (HTML autorisé)", name: "presentationTexte2", widget: "text", required: false }
+          - { label: "Citation", name: "citation", widget: "string", required: false, hint: "Citation affichée en grand en haut de la page association" }
+          - { label: "Source de la citation", name: "citationSource", widget: "string", required: false, hint: "Auteur de la citation (affiché en dessous)" }
+          - { label: "Titre présentation", name: "presentationTitre", widget: "string", required: false, hint: "Titre du bloc de présentation de l'association" }
+          - { label: "Paragraphe 1 (HTML autorisé)", name: "presentationTexte1", widget: "text", required: false, hint: "Premier paragraphe de présentation. Utiliser <strong>texte</strong> pour le gras, <em>texte</em> pour l'italique" }
+          - { label: "Paragraphe 2 (HTML autorisé)", name: "presentationTexte2", widget: "text", required: false, hint: "Second paragraphe de présentation. Mêmes balises HTML possibles" }
           - label: "Statistiques"
             name: "stats"
             widget: "list"
@@ -110,7 +112,7 @@ collections:
         label: "Page adhésion"
         file: "src/_data/adhesion.json"
         fields:
-          - { label: "Titre section avantages", name: "avantagesTitre", widget: "string", required: false }
+          - { label: "Titre section avantages", name: "avantagesTitre", widget: "string", required: false, hint: "Titre affiché au-dessus des cartes d'avantages" }
           - label: "Avantages"
             name: "avantages"
             widget: "list"
@@ -120,8 +122,8 @@ collections:
               - { label: "Icône (code HTML)", name: "icone", widget: "string", required: false, hint: "Ex : &#128230; pour 📦" }
               - { label: "Titre", name: "titre", widget: "string", required: false }
               - { label: "Description", name: "texte", widget: "text", required: false }
-          - { label: "Formules — étiquette", name: "formulesTag", widget: "string", required: false }
-          - { label: "Formules — titre (HTML autorisé)", name: "formulesTitre", widget: "string", required: false }
+          - { label: "Formules — étiquette", name: "formulesTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre des formules de cotisation" }
+          - { label: "Formules — titre (HTML autorisé)", name: "formulesTitre", widget: "string", required: false, hint: "Titre de la section formules de cotisation" }
           - label: "Formules"
             name: "formules"
             widget: "list"
@@ -131,21 +133,20 @@ collections:
               - { label: "Nom", name: "nom", widget: "string", required: false }
               - { label: "Prix (ex: 15,00)", name: "prix", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "text", required: false }
-          - { label: "HelloAsso — étiquette", name: "helloassoTag", widget: "string", required: false }
-          - { label: "HelloAsso — titre (HTML autorisé)", name: "helloassoTitre", widget: "string", required: false }
-          - { label: "HelloAsso — description", name: "helloassoDesc", widget: "text", required: false }
-          - { label: "HelloAsso — texte placeholder", name: "helloassoPlaceholder", widget: "text", required: false }
-          - { label: "HelloAsso — texte de repli", name: "helloassoFallback", widget: "text", required: false }
+          - { label: "Adhésion — étiquette", name: "adhesionTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section « Comment adhérer »" }
+          - { label: "Adhésion — titre (HTML autorisé)", name: "adhesionTitre", widget: "string", required: false, hint: "Titre de la section expliquant comment adhérer" }
+          - { label: "Adhésion — description", name: "adhesionDesc", widget: "text", required: false, hint: "Texte explicatif pour l'adhésion par email" }
+          - { label: "Texte du bouton d'adhésion", name: "adhesionBouton", widget: "string", required: false, hint: "Texte affiché sur le bouton email d'adhésion" }
 
       - name: "contact"
         label: "Page contact"
         file: "src/_data/contact.json"
         fields:
-          - { label: "Description (HTML autorisé)", name: "description", widget: "text", required: false }
-          - { label: "Titre du formulaire", name: "formeTitre", widget: "string", required: false }
-          - { label: "Manuscrit — étiquette", name: "manuscritTag", widget: "string", required: false }
-          - { label: "Manuscrit — titre (HTML autorisé)", name: "manuscritTitre", widget: "string", required: false }
-          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "text", required: false }
+          - { label: "Description (HTML autorisé)", name: "description", widget: "text", required: false, hint: "Texte de présentation affiché à gauche du formulaire de contact. Utiliser <strong>texte</strong> pour le gras" }
+          - { label: "Titre du formulaire", name: "formeTitre", widget: "string", required: false, hint: "Titre affiché au-dessus du formulaire de contact (à droite)" }
+          - { label: "Manuscrit — étiquette", name: "manuscritTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section soumission de manuscrit" }
+          - { label: "Manuscrit — titre (HTML autorisé)", name: "manuscritTitre", widget: "string", required: false, hint: "Titre de la section soumission de manuscrit" }
+          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "text", required: false, hint: "Texte explicatif affiché sous le titre, au-dessus du formulaire de soumission" }
 
   - name: "livres"
     label: "Livres"
@@ -153,6 +154,8 @@ collections:
     folder: "src/livres"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} — {{auteur}} ({{genre}}, {{prix}} €)"
+    sortable_fields: ["title", "auteur", "date", "genre"]
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Auteur", name: "auteur", widget: "string" }
@@ -161,12 +164,14 @@ collections:
         widget: "select"
         options: ["Poésie", "Roman", "Essai", "Jeunesse"]
       - { label: "Prix TTC (€)", name: "prix", widget: "number", value_type: "float", min: 0, step: 0.01 }
+      - { label: "Image de couverture", name: "coverImage", widget: "image", required: false, hint: "Photo ou visuel de la couverture du livre. Si absent, une couverture colorée sera générée automatiquement" }
       - { label: "ISBN", name: "isbn", widget: "string", required: false }
       - { label: "Nombre de pages", name: "pages", widget: "number", value_type: "int", required: false }
       - { label: "Poids (grammes)", name: "poids", widget: "number", value_type: "int", default: 300 }
       - label: "Couleur couverture"
         name: "coverClass"
         widget: "select"
+        hint: "Utilisée uniquement si aucune image de couverture n'est fournie"
         options:
           - { label: "Vert forêt", value: "cover-1" }
           - { label: "Rose bordeaux", value: "cover-2" }
@@ -196,6 +201,8 @@ collections:
     folder: "src/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{categorie}} ({{date}})"
+    sortable_fields: ["title", "date", "categorie"]
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
@@ -204,6 +211,7 @@ collections:
         name: "categorie"
         widget: "select"
         options: ["Actualités", "Coulisses", "Événements", "Revue de presse"]
+      - { label: "Image à la une", name: "image", widget: "image", required: false, hint: "Photo ou illustration affichée en haut de l'article et dans la liste du blog" }
       - { label: "Résumé", name: "excerpt", widget: "text" }
       - { label: "Contenu", name: "body", widget: "markdown" }
 
@@ -213,6 +221,8 @@ collections:
     folder: "src/evenements"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} — {{eventDate}} à {{lieu}}"
+    sortable_fields: ["title", "eventDate"]
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de l'événement", name: "eventDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
