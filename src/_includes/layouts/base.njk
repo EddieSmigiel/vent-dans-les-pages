@@ -17,6 +17,15 @@
     <!-- Snipcart -->
     <link rel="preconnect" href="https://cdn.snipcart.com">
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
+    <script>
+      window.SnipcartSettings = {
+        publicApiKey: "{{ site.snipcartApiKey }}",
+        loadStrategy: "on-user-interaction",
+        modalStyle: "side",
+        currency: "eur",
+        addProductBehavior: "none"
+      };
+    </script>
 
     <!-- Netlify Identity (pour Decap CMS) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -25,8 +34,6 @@
 
     {{ content | safe }}
 
-    <!-- Snipcart container -->
-    <div hidden id="snipcart" data-api-key="{{ site.snipcartApiKey }}" data-config-modal-style="side" data-currency="eur" data-config-add-product-behavior="none"></div>
     <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
 
     <script src="/js/main.js"></script>
