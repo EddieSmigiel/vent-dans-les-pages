@@ -119,7 +119,7 @@ permalink: /contact/
         <div class="section-header" data-reveal="up">
             <div class="section-tag">{{ contact.manuscritTag }}</div>
             <h2 class="section-title">{{ contact.manuscritTitre | safe }}</h2>
-            <p class="section-desc">{{ contact.manuscritDesc }}</p>
+            <div class="section-desc prose">{{ contact.manuscritDesc | markdownify | safe }}</div>
         </div>
 
         <div class="contact-form-wrapper" style="max-width: 640px; margin: 0 auto;" data-reveal="up">

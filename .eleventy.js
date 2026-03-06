@@ -8,6 +8,9 @@ const MOIS_FR_LONG = [
   "juillet", "août", "septembre", "octobre", "novembre", "décembre"
 ];
 
+const markdownIt = require("markdown-it");
+const md = markdownIt({ html: true });
+
 module.exports = function (eleventyConfig) {
 
   // ── Passthrough copy ──────────────────────────────────
@@ -18,6 +21,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
 
   // ── Filters ───────────────────────────────────────────
+
+  // Rendu markdown pour les champs JSON
+  eleventyConfig.addFilter("markdownify", (str) => {
+    if (!str) return "";
+    return md.render(str);
+  });
 
   // Slug compatible filesystem (pas de :, ', etc.)
   eleventyConfig.addFilter("slug", (str) => {

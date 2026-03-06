@@ -799,6 +799,28 @@ a.book-cover { color: white; }
 
 .btn-cart svg { width: 16px; height: 16px; }
 
+.btn-cart--email {
+    background: var(--green-light);
+    color: var(--green);
+    text-decoration: none;
+}
+
+.btn-cart--email:hover {
+    background: var(--green);
+    color: white;
+}
+
+.book-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.livre-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 /* ============================================
    Livre detail page
 ============================================ */

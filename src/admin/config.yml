@@ -146,7 +146,7 @@ collections:
           - { label: "Titre du formulaire", name: "formeTitre", widget: "string", required: false, hint: "Titre affiché au-dessus du formulaire de contact (à droite)" }
           - { label: "Manuscrit — étiquette", name: "manuscritTag", widget: "string", required: false, hint: "Petit mot au-dessus du titre de la section soumission de manuscrit" }
           - { label: "Manuscrit — titre (HTML autorisé)", name: "manuscritTitre", widget: "string", required: false, hint: "Titre de la section soumission de manuscrit" }
-          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "text", required: false, hint: "Texte explicatif affiché sous le titre, au-dessus du formulaire de soumission" }
+          - { label: "Manuscrit — description", name: "manuscritDesc", widget: "markdown", required: false, hint: "Texte explicatif affiché sous le titre, au-dessus du formulaire de soumission. Éditeur visuel : gras, italique, listes, liens…" }
 
   - name: "livres"
     label: "Livres"
@@ -159,10 +159,7 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Auteur", name: "auteur", widget: "string" }
-      - label: "Genre"
-        name: "genre"
-        widget: "select"
-        options: ["Poésie", "Roman", "Essai", "Jeunesse"]
+      - { label: "Genre", name: "genre", widget: "string", hint: "Ex : Roman, Poésie, Essai, Jeunesse, Nouvelles, Théâtre…" }
       - { label: "Prix TTC (€)", name: "prix", widget: "number", value_type: "float", min: 0, step: 0.01 }
       - { label: "Image de couverture", name: "coverImage", widget: "image", required: false, hint: "Photo ou visuel de la couverture du livre. Si absent, une couverture colorée sera générée automatiquement" }
       - { label: "ISBN", name: "isbn", widget: "string", required: false }

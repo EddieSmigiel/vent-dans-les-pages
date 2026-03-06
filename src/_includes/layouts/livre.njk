@@ -48,22 +48,31 @@ layout: layouts/base.njk
                         {% endif %}
                     </div>
 
-                    <button class="btn btn-primary snipcart-add-item"
-                        data-item-id="{{ slug or (title | slug) }}"
-                        data-item-name="{{ title }}"
-                        data-item-price="{{ prix }}"
-                        data-item-url="/catalogue/{{ slug or (title | slug) }}/"
-                        data-item-description="{{ genre }} — {{ auteur }}"
-                        data-item-image=""
-                        data-item-weight="{{ poids or 300 }}"
-                        {% if stock === false %}disabled{% endif %}>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                            <line x1="3" y1="6" x2="21" y2="6"/>
-                            <path d="M16 10a4 4 0 01-8 0"/>
-                        </svg>
-                        Ajouter au panier
-                    </button>
+                    <div class="livre-actions">
+                        <button class="btn btn-primary snipcart-add-item"
+                            data-item-id="{{ slug or (title | slug) }}"
+                            data-item-name="{{ title }}"
+                            data-item-price="{{ prix }}"
+                            data-item-url="/catalogue/{{ slug or (title | slug) }}/"
+                            data-item-description="{{ genre }} — {{ auteur }}"
+                            data-item-image=""
+                            data-item-weight="{{ poids or 300 }}"
+                            {% if stock === false %}disabled{% endif %}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Ajouter au panier
+                        </button>
+                        <a class="btn btn-secondary" href="mailto:{{ site.email }}?subject=Commande : {{ title }}&body=Bonjour,%0A%0AJe souhaite commander :%0A- {{ title }} ({{ auteur }}) — {{ prix | prix }}%0A%0AMerci de m'indiquer les modalités de paiement par virement.%0A%0ACordialement">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Commander par email
+                        </a>
+                    </div>
 
                     <div class="livre-meta">
                         {% if pages %}<div class="livre-meta-item"><strong>Pages :</strong> {{ pages }}</div>{% endif %}
