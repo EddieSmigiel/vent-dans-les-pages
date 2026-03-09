@@ -23,30 +23,13 @@
         <p class="book-excerpt">{{ ld.excerpt or '' }}</p>
         <div class="book-footer">
             <div class="book-price">{{ ld.prix | prix }} <small>TTC</small></div>
-            <div class="book-actions">
-                <button class="btn-cart snipcart-add-item"
-                    data-item-id="{{ ld.slug or (ld.title | slug) }}"
-                    data-item-name="{{ ld.title }}"
-                    data-item-price="{{ ld.prix }}"
-                    data-item-url="/catalogue/{{ ld.slug or (ld.title | slug) }}/"
-                    data-item-description="{{ ld.genre }} — {{ ld.auteur }}"
-                    data-item-image=""
-                    data-item-weight="{{ ld.poids or 300 }}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                        <line x1="3" y1="6" x2="21" y2="6"/>
-                        <path d="M16 10a4 4 0 01-8 0"/>
-                    </svg>
-                    Panier
-                </button>
-                <a class="btn-cart btn-cart--email" href="mailto:{{ site.email }}?subject=Commande : {{ ld.title }}&body=Bonjour,%0A%0AJe souhaite commander :%0A- {{ ld.title }} ({{ ld.auteur }}) — {{ ld.prix | prix }}%0A%0AMerci de m'indiquer les modalités de paiement par virement.%0A%0ACordialement">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    Email
-                </a>
-            </div>
+            <a class="btn-cart" href="mailto:{{ site.email }}?subject=Commande : {{ ld.title }}&body=Bonjour,%0A%0AJe souhaite commander :%0A- {{ ld.title }} ({{ ld.auteur }}) — {{ ld.prix | prix }}%0A%0AMerci de m'indiquer les modalités de paiement par virement.%0A%0ACordialement">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                Commander
+            </a>
         </div>
     </div>
 </div>
