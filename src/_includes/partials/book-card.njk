@@ -23,7 +23,7 @@
         <p class="book-excerpt">{{ ld.excerpt or '' }}</p>
         <div class="book-footer">
             <div class="book-price">{{ ld.prix | prix }} <small>TTC</small></div>
-            <a class="btn-cart" href="mailto:{{ site.email }}?subject=Commande : {{ ld.title }}&body=Bonjour,%0A%0AJe souhaite commander :%0A- {{ ld.title }} ({{ ld.auteur }}) — {{ ld.prix | prix }}%0A%0AMerci de m'indiquer les modalités de paiement par virement.%0A%0ACordialement">
+            <a class="btn-cart" href="mailto:{{ site.email }}?subject=Commande%20%3A%20{{ ld.title | urlencode }}&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20commander%20%3A%0A-%20{{ ld.title | urlencode }}%20({{ ld.auteur | urlencode }})%20%E2%80%94%20{{ ld.prix }}%20%E2%82%AC%0A%0AMerci%20de%20m%27indiquer%20les%20modalit%C3%A9s%20de%20paiement%20par%20virement.%0A%0ACordialement">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                     <polyline points="22,6 12,13 2,6"/>

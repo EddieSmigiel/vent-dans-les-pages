@@ -108,21 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2500);
     }
 
-    // Expose toast globally for Snipcart events
+    // Expose toast globally
     window.showToast = showToast;
-
-    // ============================================
-    // Snipcart events
-    // ============================================
-    document.addEventListener('snipcart.ready', () => {
-        Snipcart.events.on('item.added', (item) => {
-            showToast('Ajouté au panier : ' + item.name);
-        });
-
-        Snipcart.events.on('item.removed', (item) => {
-            showToast('Article retiré du panier');
-        });
-    });
 
     // ============================================
     // Fade-in keyframe injection
