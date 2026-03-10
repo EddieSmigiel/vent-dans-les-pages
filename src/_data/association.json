@@ -17,7 +17,7 @@
     {
       "icone": "📚",
       "titre": "Diversité littéraire",
-      "texte": "Poésie, romans, essais, jeunesse : toutes les voix comptent."
+      "texte": "Poésie, romans, essais, jeunesse : toutes les voix comptent. Les titres à venir en 2026 seront des romans de littérature générale."
     },
     {
       "icone": "🎨",
@@ -46,16 +46,16 @@
   "equipeTitre": "Qui sommes-<em>nous</em> ?",
   "stats": [
     {
-      "nombre": "24",
-      "label": "Ouvrages publiés"
+      "nombre": "1",
+      "label": "Ouvrage publié"
     },
     {
-      "nombre": "12",
-      "label": "Auteurs édités"
+      "nombre": "1",
+      "label": "Auteur édité"
     },
     {
-      "nombre": "6",
-      "label": "Années d'existence"
+      "nombre": "1",
+      "label": "Année d'existence"
     }
   ]
 }
