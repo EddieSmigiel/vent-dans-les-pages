@@ -1,33 +1,26 @@
 ---
 title: "Appel à manuscrits : saison 2026-2027"
-auteur: "L'équipe"
-categorie: "Appels"
-excerpt: "Vous écrivez ? Envoyez-nous votre manuscrit avant le 30 juin 2026. Tous les genres sont les bienvenus."
-date: 2026-02-10
+date: 2026-07-03
+auteur: L'équipe
+categorie: Appels
+excerpt: "Du vent dans les pages lance son premier appel à manuscrits. "
 ---
 
-Chaque année, **Du vent dans les pages** ouvre ses portes aux auteurs qui souhaitent être publiés. Notre comité de lecture, composé de cinq bénévoles passionnés, examine chaque manuscrit avec attention.
 
-## Ce que nous cherchons
+Du vent dans les pages lance son premier appel à manuscrits en littérature générale. La littérature de genre en est exclue (SF, Fantasy, Romance, etc.).
 
-- **Tous les genres** : roman, nouvelles, poésie, essai, jeunesse, beau livre
-- **Un ancrage** : nous privilégions les textes liés à l'Alsace, au Rhin, à l'Europe rhénane — mais ce n'est pas une obligation
-- **Une voix singulière** : ce qui nous touche, c'est l'authenticité du regard et la qualité de l'écriture
+Un polar ou un roman historique qui transcende les stricts codes du genre est éligible.
 
-## Comment soumettre
+L'appel est ouvert jusqu'au 31 août à concurrence des cent premiers textes. Le nombre de manuscrits est limité de manière à ne pas saturer le comité de lecture et garantir à chaque auteur un traitement équitable. 
 
-1. Préparez votre manuscrit en format PDF ou Word
-2. Rédigez une courte note d'intention (1 page max)
-3. Envoyez le tout via notre [formulaire de contact](/contact/) (section "Soumettre un manuscrit") ou par email à contact@duventdanslespages.fr
+Le calendrier prévisionnel est indiqué ci-dessous :
 
-## Calendrier
+31 août 2026 : clôture de l'appel (au plus tard). L'appel est limité à cent manuscrits.
 
-- **Date limite de réception** : 30 juin 2026
-- **Réponse du comité** : avant le 30 septembre 2026
-- **Publication prévue** : premier semestre 2027
+31 octobre : fin de l'évaluation initiale. Les auteurs non sélectionnés reçoivent les fiches évaluation au plus tard à cette date. Le comité de lecture sélectionne à l'issue de ce premier tour une quinzaine de textes qui seront étudiés en détail.
 
-## Quelques chiffres
+30 novembre : résultat final de la sélection. Les auteurs qui ont passé le premier tour mais finalement non retenus reçoivent le retour critique.
 
-L'an dernier, nous avons reçu 47 manuscrits et en avons retenu 3 pour publication. Chaque texte est lu par au moins deux membres du comité.
+Le travail éditorial avec le ou les auteurs retenus (maximum 3) commence vers le 1er décembre pour une publication, a priori, en février 2027.
 
 Nous avons hâte de vous lire !
