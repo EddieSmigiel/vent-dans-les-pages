@@ -5,9 +5,7 @@ auteur: L'équipe
 categorie: Appels
 excerpt: "Du vent dans les pages lance son premier appel à manuscrits. "
 ---
-
-
-Du vent dans les pages lance son premier appel à manuscrits en littérature générale. La littérature de genre en est exclue (SF, Fantasy, Romance, etc.).
+Du vent dans les pages lance son premier appel à manuscrits. Nous cherchons des romans en littérature générale. La littérature de genre en est exclue (SF, Fantasy, Romance, etc.).
 
 Un polar ou un roman historique qui transcende les stricts codes du genre est éligible.
 
